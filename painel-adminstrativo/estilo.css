@@ -1,0 +1,50 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.altura-conteiners{
+	min-height: 300px;
+	max-height: 500px;
+}
+
+#div-relatorios{
+	background-color: lightgrey;
+
+	margin: 20px;
+	height: 500px;
+}
+
+#div-novidades{
+	background-color: lightgrey;
+
+	margin: 20px;
+	padding: 10px;
+}
+#novidades{
+	background-color: grey;
+
+	margin: 20px;
+	padding: 10px;
+}
+.img-novidades{
+	float: left;
+
+	width: 50px;
+	height: 50px;
+
+	border-radius: 100px;
+}
+
+#div-listagem{
+	background-color: lightgrey;
+
+	margin: 20px;
+}
+
+#div-usuarios{
+	background-color: lightgrey;
+
+	margin: 20px;
+}
