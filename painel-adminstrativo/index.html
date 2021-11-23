@@ -9,53 +9,67 @@
 	<title>Painel Administrativo</title>
 </head>
 <body>
-	<div class="conteiner">
-		<div id="div-relatorios" class="row">
-			<h4>RELATÓRIOS DA INCUBADORA</h4>
+	<div class="container-fluid"> <!-- CONTEINER GERAL DAS FUNCIONALIDADES -->
+		
+		<div id="div-relatorios" class="row gx-5">
+			<!-- RELATÓRIOS DA INCUBADORA -->
+			<div class="col">
+				<h4>RELATÓRIOS DA INCUBADORA</h4>
+			</div>
 		</div>
-		<div class="row">
-			<div id="div-novidades" class="col altura-conteiners">
-				<div id="novidades" class="row">
-					<img src="brasil.jpg" class="img-thumbnail"style="float: left;width: 50px;height: 50px;">
-					<div class="col">
-						<h4>Empresa XPTO</h4>
-						<p>Descricao</p>
-					</div>
-				</div>
-				<div id="novidades" class="row">
-					<img src="brasil.jpg" class="img-thumbnail"style="float: left;width: 50px;height: 50px;">
-					<div class="col">
-						<h4>Empresa XPTO</h4>
-						<p>Descricao</p>
-					</div>
-				</div>
-				<div id="novidades" class="row">
-					<img src="brasil.jpg" class="img-thumbnail"style="float: left;width: 50px;height: 50px;">
-					<div class="col">
-						<h4>Empresa XPTO</h4>
-						<p>Descricao</p>
-					</div>
-				</div>
-				<div id="novidades" class="row">
-					<img src="brasil.jpg" class="img-thumbnail"style="float: left;width: 50px;height: 50px;">
-					<div class="col">
-						<h4>Empresa XPTO</h4>
-						<p>Descricao</p>
-					</div>
-				</div>
 
-				<div id="novidades" class="row">
-					<img src="brasil.jpg" class="img-thumbnail"style="float: left;width: 50px;height: 50px;">
-					<div class="col">
-						<h4>Empresa XPTO</h4>
-						<p>Descricao</p>
+		<div id="funcionalidades" class="row">
+			<!-- LISTAGEM DE NOVIDADES -->
+			<div class="col altura-conteiners">
+				<div class="container-fluid">
+					<div class="row novidades">
+						<div class="col">
+							<img src="brasil.jpg" class="img-thumbnail img-fluid logo-empresa">
+						</div>
+						<div class="col">
+							<h4>Empresa XPTO</h4>
+							<p>Descricao</p>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row novidades">
+						<div class="col">
+							<img src="brasil.jpg" class="img-thumbnail img-fluid logo-empresa">
+						</div>
+						<div class="col">
+							<h4>Empresa XPTO</h4>
+							<p>Descricao</p>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row novidades">
+						<div class="col">
+							<img src="brasil.jpg" class="img-thumbnail img-fluid logo-empresa">
+						</div>
+						<div class="col">
+							<h4>Empresa XPTO</h4>
+							<p>Descricao</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div id="div-listagem" class="col altura-conteiners">
-				<h4>VISUALIZAR EMPREENDIMENTOS</h4>
+
+			<div class="col altura-conteiners">
+				<!-- LISTAGEM DE EMPREENDIMENTOS -->
+				<h4>LISTAGEM DE EMPREENDIMENTOS</h4>
+				<select class="form-select" aria-label="Default select example">
+				  <option selected>Selecione o empreendimento</option>
+				  <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
+				  <option value="1">Empresa XPTO</option>
+				  <option value="2">Empresa XPTO</option>
+				  <option value="3">Empresa XPTO</option>
+				</select>
 			</div>
-			<div id="div-usuarios" class="col-2 altura-conteiners">
+
+			<div class="col-lg-2 altura-conteiners">
+				<!-- ADMINISTRAR USUÁRIOS -->
 				<h4>ADMINISTRAR USUÁRIOS</h4>
 			</div>
 		</div>
