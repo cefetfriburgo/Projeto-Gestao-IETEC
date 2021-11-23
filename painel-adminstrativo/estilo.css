@@ -9,10 +9,18 @@
 	min-height: 300px;
 	max-height: 500px;
 }
+.rolagem{
+	overflow-y: auto;
+}
+
+
+#funcionalidades{
+}
 #funcionalidades > div:last-child{
 	background-color: blue;
-
-	overflow-y: auto;
+}
+.cartao{
+	
 }
 
 
@@ -22,11 +30,10 @@
 	height: 500px;
 }
 
+
 .novidades{
 	background-color: grey;
 }
 .logo-empresa{
-	background-size: cover;
-	
-	float: left;
+	width: 100%;
 }

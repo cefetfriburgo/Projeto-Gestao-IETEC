@@ -10,54 +10,62 @@
 </head>
 <body>
 	<div class="container-fluid"> <!-- CONTEINER GERAL DAS FUNCIONALIDADES -->
-		
-		<div id="div-relatorios" class="row gx-5">
+
+		<div id="funcionalidades" class="row justify-content-around">
+
 			<!-- RELATÓRIOS DA INCUBADORA -->
-			<div class="col">
+			<div id="div-relatorios" class="row">
 				<h4>RELATÓRIOS DA INCUBADORA</h4>
 			</div>
-		</div>
 
-		<div id="funcionalidades" class="row">
 			<!-- LISTAGEM DE NOVIDADES -->
-			<div class="col altura-conteiners">
+			<div class="col-4 altura-conteiners bg-info rolagem">
+				<h4>LISTAGEM DE NOVIDADES</h4>
+
 				<div class="container-fluid">
-					<div class="row novidades">
+					<div class="row novidades mt-2">
 						<div class="col">
-							<img src="brasil.jpg" class="img-thumbnail img-fluid logo-empresa">
+							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
 						</div>
 						<div class="col">
 							<h4>Empresa XPTO</h4>
 							<p>Descricao</p>
 						</div>
 					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="row novidades">
+					<div class="row novidades mt-2">
 						<div class="col">
-							<img src="brasil.jpg" class="img-thumbnail img-fluid logo-empresa">
+							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
 						</div>
 						<div class="col">
 							<h4>Empresa XPTO</h4>
 							<p>Descricao</p>
 						</div>
 					</div>
-				</div>
-				<div class="container-fluid">
-					<div class="row novidades">
+					<div class="row novidades mt-2">
 						<div class="col">
-							<img src="brasil.jpg" class="img-thumbnail img-fluid logo-empresa">
+							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
 						</div>
 						<div class="col">
 							<h4>Empresa XPTO</h4>
 							<p>Descricao</p>
 						</div>
 					</div>
+					<div class="row novidades mt-2">
+						<div class="col">
+							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
+						</div>
+						<div class="col">
+							<h4>Empresa XPTO</h4>
+							<p>Descricao</p>
+						</div>
+					</div>
+
 				</div>
+
 			</div>
 
-			<div class="col altura-conteiners">
-				<!-- LISTAGEM DE EMPREENDIMENTOS -->
+			<!-- LISTAGEM DE EMPREENDIMENTOS -->
+			<div class="col-4 altura-conteiners bg-info rolagem">
 				<h4>LISTAGEM DE EMPREENDIMENTOS</h4>
 				<select class="form-select" aria-label="Default select example">
 				  <option selected>Selecione o empreendimento</option>
@@ -66,12 +74,22 @@
 				  <option value="2">Empresa XPTO</option>
 				  <option value="3">Empresa XPTO</option>
 				</select>
+
+				<h5>Nenhum Empreendimento Listado</h5>
+
+				<a target="blank" href="../cadastro-empreendimento/cadastro-empreendimento.html">
+					<button>Cadastrar Empreendimento</button>
+				</a>
 			</div>
 
-			<div class="col-lg-2 altura-conteiners">
-				<!-- ADMINISTRAR USUÁRIOS -->
-				<h4>ADMINISTRAR USUÁRIOS</h4>
+			<!-- OUTRAS FUNÇÕES -->
+			<div class="col-lg-2 altura-conteiners bg-info rolagem">
+				<h4>OUTRAS FUNÇÕES</h4>
+				<button>Administrar Usuários</button>
+				<button>Outra funcionalidade</button>
+				<button>Outra funcionalidade</button>
 			</div>
+
 		</div>
 	</div>
 </body>
