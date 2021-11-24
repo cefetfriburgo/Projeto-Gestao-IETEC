@@ -14,13 +14,8 @@
 }
 
 
-#funcionalidades{
-}
 #funcionalidades > div:last-child{
-	background-color: blue;
-}
-.cartao{
-	
+	background-color: red;
 }
 
 
