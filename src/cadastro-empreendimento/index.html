@@ -11,109 +11,118 @@
 <body>
 	<div class="container-fluid">
 		<div class="container">
-			<form action="bancodedados.html">
-				<div class="row div-cadastro-superior mt-5">
+			<form action="">
+				<legend>Cadastro de Empreendimento | IETEC</legend>
+				<div class="row mt-5 cadastro-superior">
 					<div class="col-5">
-							<!-- INCUBAÇÃO RADIOS -->
+							<!-- INCUBAÇÃO RADIOS | A DATA DE CADASTRO SERÁ ENVIADA AUTOMATICAMENTE -->
 							<div class="row">
 								<div class="col-4">
 									<div class="form-check">
-										<input class="form-check-input" type="radio" name="flexRadio" id="flexRadio">
-										<label class="form-check-label" for="flexRadio">Pré-Incubação</label>
+										<label class="form-check-label" for="flexRadio" for="piRadio">Pré-Incubação</label>
+										<input class="form-check-input" type="radio" name="flexRadio" id="piRadio">
 									</div>
 								</div>
 								<div class="col-4">	
 									<div class="form-check">
-										<input class="form-check-input" type="radio" name="flexRadio" id="flexRadio">
-										<label class="form-check-label" for="flexRadio">Incubação</label>
+										<label class="form-check-label" for="iRadio">Incubação</label>
+										<input class="form-check-input" type="radio" name="flexRadio" id="iRadio">
 									</div>
+								</div>
+								<div class="col-4">
+									<label class="form-check-label" for="data">Data Atual</label>
+									<input class="form-check-input" type="datetime-local" id="data">
+									<div class="form-text">(data automática do sistema)</div>
 								</div>
 							</div>
 								
-
-							<!-- INPUTS COLUNA DA ESQUERDA -->
-							<label>Sigla/Marca*</label>
-							<input class="form-control" type="text" >
-							<div class="form-text"></div>
-							<label>Razão Social/Nome*</label>
-							<input class="form-control" type="text">
-							<div class="form-text"></div>
+							<div class="row">
+								<div class="col-10">
+									<!-- INPUTS COLUNA DA ESQUERDA -->
+									<label for="sigla-marca" class="form-label">Sigla/Marca*</label>
+									<input id="sigla-marca" class="form-control" type="text" placeholder="Sigla/Marca">
+									<div class="form-text">Comentário pertinente</div>
+									<label for="razaoSocial-nome" class="form-label">Razão Social/Nome*</label>
+									<input id="razaoSocial-nome" class="form-control" type="text" placeholder="Razão Social/Nome">
+									<div class="form-text">Comentário pertinente</div>
+								</div>
+							</div>
 
 							<div class="row">
-								<div class="col-4">
-									<label>CPF*</label>
-									<input class="form-control" type="text">
+								<div class="col-5">
+									<label for="cpf" class="form-label">CPF*</label>
+									<input id="cpf" class="form-control" type="text">
 									<div class="form-text"></div>
 								</div>
-								<div class="col-4">
-									<label>CNPJ*</label>
-									<input class="form-control" type="text">
+								<div class="col-5">
+									<label  for="cnpj" class="form-label">CNPJ*</label>
+									<input id="cnpj" class="form-control" type="text">
 									<div class="form-text"></div>
 								</div>
 							</div>
 
 							<div class="row">
-								<div class="col-4">
-									<label>CNAE*</label>
-									<input class="form-control" type="text">
+								<div class="col-5">
+									<label for="cnae" class="form-label">CNAE*</label>
+									<input id="cnae" class="form-control" type="text">
 									<div class="form-text"></div>
 								</div>
-								<div class="col-4">
-									<label>Inscrição Estadual*</label>
-									<input class="form-control" type="text">
+								<div class="col-5">
+									<label for="inscricaoEstadual" class="form-label">Inscrição Estadual*</label>
+									<input id="inscricaoEstadual" class="form-control" type="text">
 									<div class="form-text"></div>
 								</div>
 							</div>
 					</div>
 					<div class="col-5">
-						
-							<!-- INPUTS COLUNA DA DIREITA -->
-							<label>CEP*</label>
-							<input class="form-control" type="text">
-							<label>Endereço</label>
-							<input class="form-control" type="text">
-							<label>Número</label>
-							<input class="form-control" type="text">
-							<label>Complemento</label>
-							<input class="form-control" type="text">
-							<label>Bairro</label>
-							<input class="form-control" type="text">
-							<label>Município</label>
-							<input class="form-control" type="text">
-						
+						<!-- INPUTS COLUNA DA DIREITA -->
+						<label  for="cep" class="form-label">CEP*</label>
+						<input id="cep" class="form-control" type="text" placeholder="CEP">
+						<div class="form-text">Insira o CEP. Preenchimento automático de endereço</div>
+						<fieldset disabled>
+							<input class="form-control mt-2" type="text" placeholder="Endereço">
+							<input 	id="numero" class="form-control mt-1" type="number" placeholder="Número">
+							<input id="complemento" class="form-control mt-1" type="text" placeholder="Complemento">
+							<input id="bairro" class="form-control mt-1" type="text" placeholder="Bairro">
+							<input id="municipio" class="form-control mt-1" type="text" placeholder="Município">
+						</fieldset>
 					</div>
 				</div>
-				<div class="row div-cadastro-inferior">
+				<div class="row cadastro-inferior">
 					<div class="col-12">
 						<!-- INPUTS LINHA INFERIOR -->
-						<label>DDD*</label>
-						<input class="form-control" type="text">
+						<div class="row">
+							<div class="col-1">
+								<label  for="ddd" class="form-label">DDD*</label>
+								<input id="ddd" class="col-1 form-control" type="tel">
+							</div>
+						</div>
 						
 						<div class="row">
-							<div class="col-6">
-								<label>Telefone</label>
-								<input class="form-control" type="text">
+							<div class="col-2">
+								<label  for="telefone" class="form-label">Telefone</label>
+								<input id="telefone" class="form-control" type="tel">
 							</div>
-							<div class="col-6">
-								<label>Celular*</label>
-								<input class="form-control" type="text">
+							<div class="col-2">
+								<label for="celular" class="form-label">Celular*</label>
+								<input id="celular" class="form-control" type="tel">
 							
 							</div>
 						</div>
 							
 						<div class="row">
-							<div class="col-6">	
-								<label>E-mail</label>
-								<input class="form-control" type="text">
+							<div class="col-3">	
+								<label for="e-mail" class="form-label">E-mail</label>
+								<input id="e-mail" class="form-control" type="email">
 							</div>
-							<div class="col-6">
-								<label>Website</label>
-								<input class="form-control" type="text">		
+							<div class="col-3">
+								<label for="website" class="form-label">Website</label>
+								<input id="website" class="form-control" type="url">	
 							</div>
 						</div>
 					</div>
-				<input type="submit" value="Cadastrar">
-				 
+					<button type="submit" class="col-1 btn btn-primary">Cadastrar</button>
+				</div>
 			</form>
 		</div>
 	</div>
