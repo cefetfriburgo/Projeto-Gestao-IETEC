@@ -66,41 +66,34 @@
 			<!-- LISTAGEM DE EMPREENDIMENTOS -->
 			<div class="col-4 altura-conteiners bg-info">
 				<h4>LISTAGEM DE EMPREENDIMENTOS</h4>
-				<select class="form-select" aria-label="Default select example">
+				<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
 				  <option selected>Selecione o empreendimento</option>
-				  <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
 				  <option value="1">Empresa XPTO</option>
 				  <option value="2">Empresa XPTO</option>
 				  <option value="3">Empresa XPTO</option>
 				</select>
 				<h5 class="d-flex justify-content-center">Nenhum empreendimento listado</h5>
-				<div class="d-grid gap-2 col-6 mx-auto mt-3">
-					<button class="btn btn-primary" type="button" onclick="window.open('../cadastro-empreendimento/index.html','_blank')">
-						Cadastrar Empreendimento
-					</button>
-				</div>
 			</div>
 
 			<!-- OUTRAS FUNÇÕES -->
 			<div class="col-2 altura-conteiners bg-info rolagem">
 				<h4>OUTRAS FUNÇÕES</h4>
-				<div class="d-grid gap-2 col-6 mx-auto mt-3">
-					<button class="btn btn-primary" type="button" onclick="window.open('../cadastro-empreendimento/index.html','_blank')">
+				<div class="d-grid mx-auto mt-2">
+					<button class="btn btn-primary" onclick="window.open('../cadastro-empreendimento/index.html','_blank')">
+						Cadastrar Empreendimento
+					</button>
+				</div>
+				<div class="d-grid mx-auto mt-2">
+					<button class="btn btn-primary" onclick="window.open('../','_blank')">
+						Editar Empreendimento Cadastrado
+					</button>
+				</div>
+				<div class="d-grid mx-auto mt-2">
+					<button class="btn btn-primary" onclick="window.open('../','_blank')">
 						Administrar usuários
 					</button>
 				</div>
-				<div class="d-grid gap-2 col-6 mx-auto mt-3">
-					<button class="btn btn-primary" type="button" onclick="window.open('../cadastro-empreendimento/index.html','_blank')">
-						Outra funcionalidade
-					</button>
-				</div>
-				<div class="d-grid gap-2 col-6 mx-auto mt-3">
-					<button class="btn btn-primary" type="button" onclick="window.open('../cadastro-empreendimento/index.html','_blank')">
-						Outras funcionalidade
-					</button>
-				</div>
 			</div>
-
 		</div>
 	</div>
 </body>

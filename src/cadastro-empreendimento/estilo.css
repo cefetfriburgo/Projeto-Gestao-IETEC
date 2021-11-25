@@ -1,16 +1,15 @@
 body{
-    background-color: lightskyblue;
+    background-color: lightgoldenrodyellow;
 }
 .cadastro-superior{
-    background-color: lightgray;
+    background-color: lightblue;
+    border-radius: 5px;
 
-    height: 450px;
-
-    padding: 10px;
+    height: 350px;
 }
 .cadastro-inferior{
-    background-color: lightgray;
-    height: 300px;
+    background-color: lightblue;
+    border-radius: 5px;
 
-    padding: 10px;
+    height: 250px;
 }

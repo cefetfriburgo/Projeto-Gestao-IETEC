@@ -10,118 +10,129 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="container">
+		<div class="container px-5">
 			<form action="">
-				<legend>Cadastro de Empreendimento | IETEC</legend>
-				<div class="row mt-5 cadastro-superior">
-					<div class="col-5">
-							<!-- INCUBAÇÃO RADIOS | A DATA DE CADASTRO SERÁ ENVIADA AUTOMATICAMENTE -->
-							<div class="row">
-								<div class="col-4">
-									<div class="form-check">
-										<label class="form-check-label" for="flexRadio" for="piRadio">Pré-Incubação</label>
-										<input class="form-check-input" type="radio" name="flexRadio" id="piRadio">
-									</div>
-								</div>
-								<div class="col-4">	
-									<div class="form-check">
-										<label class="form-check-label" for="iRadio">Incubação</label>
-										<input class="form-check-input" type="radio" name="flexRadio" id="iRadio">
-									</div>
-								</div>
-								<div class="col-4">
-									<label class="form-check-label" for="data">Data Atual</label>
-									<input class="form-check-input" type="datetime-local" id="data">
-									<div class="form-text">(data automática do sistema)</div>
+				<legend class="mt-5">Cadastro de Empreendimento | IETEC</legend>
+				<div class="row cadastro-superior mb-2 p-4">
+					<div class="col-6">
+						<!-- INPUTS COLUNA DA ESQUERDA -->
+						<!-- INCUBAÇÃO RADIOS | A DATA DE CADASTRO SERÁ ENVIADA AUTOMATICAMENTE -->
+						<div class="row">
+							<div class="col-sm">
+								<span class="form-text">*Fase de Incubação</span>
+							</div>
+							<div class="col-sm">
+								<div class="form-check">
+									<label class="form-check-label" for="flexRadio" for="piRadio">Pré-Incubação</label>
+									<input class="form-check-input" type="radio" name="flexRadio" id="piRadio">
 								</div>
 							</div>
-								
-							<div class="row">
-								<div class="col-10">
-									<!-- INPUTS COLUNA DA ESQUERDA -->
-									<label for="sigla-marca" class="form-label">Sigla/Marca*</label>
-									<input id="sigla-marca" class="form-control" type="text" placeholder="Sigla/Marca">
-									<div class="form-text">Comentário pertinente</div>
-									<label for="razaoSocial-nome" class="form-label">Razão Social/Nome*</label>
-									<input id="razaoSocial-nome" class="form-control" type="text" placeholder="Razão Social/Nome">
-									<div class="form-text">Comentário pertinente</div>
+							<div class="col-sm">	
+								<div class="form-check">
+									<label class="form-check-label" for="iRadio">Incubação</label>
+									<input class="form-check-input" type="radio" name="flexRadio" id="iRadio">
 								</div>
 							</div>
-
-							<div class="row">
-								<div class="col-5">
-									<label for="cpf" class="form-label">CPF*</label>
-									<input id="cpf" class="form-control" type="text">
-									<div class="form-text"></div>
-								</div>
-								<div class="col-5">
-									<label  for="cnpj" class="form-label">CNPJ*</label>
-									<input id="cnpj" class="form-control" type="text">
-									<div class="form-text"></div>
-								</div>
+							<div class="col-sm">
+								<label class="form-check-label" for="data">Data Atual</label>
+								<input class="form-check-input" type="datetime-local" id="data">
+								<div class="form-text">(data do sistema)</div>
 							</div>
-
-							<div class="row">
-								<div class="col-5">
-									<label for="cnae" class="form-label">CNAE*</label>
-									<input id="cnae" class="form-control" type="text">
-									<div class="form-text"></div>
-								</div>
-								<div class="col-5">
-									<label for="inscricaoEstadual" class="form-label">Inscrição Estadual*</label>
-									<input id="inscricaoEstadual" class="form-control" type="text">
-									<div class="form-text"></div>
-								</div>
+						</div>
+						<div class="row">
+							<div class="col-10">
+								<label for="sigla-marca" >Sigla/Marca*</label>
+								<input id="sigla-marca" class="form-control form-control-sm mb-1" type="text" placeholder="Sigla/Marca">
+								<label for="razaoSocial-nome" >Razão Social/Nome*</label>
+								<input id="razaoSocial-nome" class="form-control form-control-sm mb-1" type="text" placeholder="Razão Social/Nome">
 							</div>
+						</div>
+						<div class="row">
+							<div class="col-5">
+								<label for="cpf" >CPF*</label>
+								<input id="cpf" class="form-control form-control-sm" type="text">
+								<div class="form-text"></div>
+							</div>
+							<div class="col-5">
+								<label  for="cnpj" >CNPJ*</label>
+								<input id="cnpj" class="form-control form-control-sm" type="text">
+								<div class="form-text"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-5">
+								<label for="cnae" >CNAE*</label>
+								<input id="cnae" class="form-control form-control-sm" type="text">
+								<div class="form-text"></div>
+							</div>
+							<div class="col-5">
+								<label for="inscricaoEstadual" >Inscrição Estadual*</label>
+								<input id="inscricaoEstadual" class="form-control form-control-sm" type="text">
+								<div class="form-text"></div>
+							</div>
+						</div>
 					</div>
-					<div class="col-5">
-						<!-- INPUTS COLUNA DA DIREITA -->
-						<label  for="cep" class="form-label">CEP*</label>
-						<input id="cep" class="form-control" type="text" placeholder="CEP">
-						<div class="form-text">Insira o CEP. Preenchimento automático de endereço</div>
-						<fieldset disabled>
-							<input class="form-control mt-2" type="text" placeholder="Endereço">
-							<input 	id="numero" class="form-control mt-1" type="number" placeholder="Número">
-							<input id="complemento" class="form-control mt-1" type="text" placeholder="Complemento">
-							<input id="bairro" class="form-control mt-1" type="text" placeholder="Bairro">
-							<input id="municipio" class="form-control mt-1" type="text" placeholder="Município">
-						</fieldset>
+
+					<!-- INPUTS COLUNA DA DIREITA -->
+					<div class="col-4">
+						<div class="form-floating">
+							<input id="cep" class="form-control" type="text" placeholder="CEP">
+							<label  for="cep">CEP*</label>
+						</div>
+						<div class="form-text">Insira o CEP</div>
+						<input class="form-control form-control-sm mt-2" type="text" placeholder="Endereço" disable readonly>
+						<input 	id="numero" class="form-control form-control-sm mt-1" type="number" placeholder="Número" disable readonly>
+						<input id="complemento" class="form-control form-control-sm mt-1" type="text" placeholder="Complemento" disable readonly>
+						<input id="bairro" class="form-control form-control-sm mt-1" type="text" placeholder="Bairro" disable readonly>
+						<input id="municipio" class="form-control form-control-sm mt-1" type="text" placeholder="Município" disable readonly>
+						<div class="form-text">Preenchimento automático de endereço</div>
 					</div>
 				</div>
-				<div class="row cadastro-inferior">
-					<div class="col-12">
-						<!-- INPUTS LINHA INFERIOR -->
-						<div class="row">
-							<div class="col-1">
-								<label  for="ddd" class="form-label">DDD*</label>
-								<input id="ddd" class="col-1 form-control" type="tel">
-							</div>
-						</div>
-						
+
+				<!-- INPUTS LINHA INFERIOR -->
+				<div class="row cadastro-inferior p-4">
+					<div class="col-6">
 						<div class="row">
 							<div class="col-2">
-								<label  for="telefone" class="form-label">Telefone</label>
-								<input id="telefone" class="form-control" type="tel">
-							</div>
-							<div class="col-2">
-								<label for="celular" class="form-label">Celular*</label>
-								<input id="celular" class="form-control" type="tel">
-							
+								<label  for="ddd">DDD*</label>
+								<input id="ddd" class="col-1 form-control form-control-sm mb-1" type="tel">
 							</div>
 						</div>
-							
 						<div class="row">
-							<div class="col-3">	
-								<label for="e-mail" class="form-label">E-mail</label>
-								<input id="e-mail" class="form-control" type="email">
+							<div class="col-3">
+								<label  for="telefone">Telefone</label>
+								<input id="telefone" class="form-control form-control-sm mb-1" type="tel">
 							</div>
 							<div class="col-3">
-								<label for="website" class="form-label">Website</label>
-								<input id="website" class="form-control" type="url">	
+								<label for="celular">Celular*</label>
+								<input id="celular" class="form-control form-control-sm mb-1" type="tel">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4">	
+								<label for="e-mail" >E-mail</label>
+								<input id="e-mail" class="form-control form-control-sm mb-1" type="email">
+							</div>
+							<div class="col-4">
+								<label for="website" >Website</label>
+								<input id="website" class="form-control form-control-sm mb-1" type="url">	
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="col-1 btn btn-primary">Cadastrar</button>
+					<div class="col-5">
+						<label  for="logoEmpresa">Adicione a logo do empreendimento</label>
+						<input class="form-control form-control-sm mb-4" type="file" id="logoEmpresa">
+						<div class="form-floating">
+							<textarea class="form-control form-control-sm" placeholder="" id="comentario" style="max-height: 100px"></textarea>
+							<label for="comentario">Adicione um comentário</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="btn btn-success mt-3" for="cadastrar">Cadastrar</label>
+						<input type="submit" class="btn-check" id="cadastrar" checked>
+					</div>
 				</div>
 			</form>
 		</div>
