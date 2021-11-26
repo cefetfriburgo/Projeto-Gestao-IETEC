@@ -10,74 +10,128 @@
 </head>
 <body>
 	<div class="container-fluid"> <!-- CONTEINER GERAL DAS FUNCIONALIDADES -->
-
-		<div id="funcionalidades" class="row justify-content-around">
-
-			<!-- RELATÓRIOS DA INCUBADORA -->
-			<div id="div-relatorios" class="row">
-				<h4>RELATÓRIOS DA INCUBADORA</h4>
+		<!-- RELATÓRIOS DA INCUBADORA -->
+		<div class="row m-4">
+			<div class="d-flex justify-content-center">
+				<div id="div-relatorios" class="col-10">
+					<div class="">
+						<button class="btn btn-primary">Acessar mais relatórios</button>
+					</div>
+				</div>
 			</div>
+		</div>
 
+		<div class="row justify-content-around">
 			<!-- LISTAGEM DE NOVIDADES -->
-			<div class="col-4 altura-conteiners bg-info rolagem">
-				<h4>LISTAGEM DE NOVIDADES</h4>
+			<div id="div-novidades" class="col-3 altura-conteiners bg-info rolagem p-3">
+				<div class="row mb-2">
+					<div class="col-6">
+						<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
+							<option selected>Tipo</option>
+							<option value="1">Pré-Incubada</option>
+							<option value="2">Incubada</option>
+						</select>
+					</div>
+					<div class="col-6">
+						<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
+							<option selected>Selecione o empreendimento</option>
+							<option value="1">Empresa XPTO</option>
+							<option value="2">Empresa XPTO</option>
+							<option value="3">Empresa XPTO</option>
+						</select>
+					</div>
+				</div>
 
-				<div class="container-fluid">
-					<div class="row novidades mt-2">
-						<div class="col">
-							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
-						</div>
-						<div class="col">
-							<h4>Empresa XPTO</h4>
-							<p>Descricao</p>
-						</div>
+				<div class="card text-center mt-2">
+					<div class="card-header">
+						<p>Status: <i>Concluída</i></p>
 					</div>
-					<div class="row novidades mt-2">
-						<div class="col">
-							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
-						</div>
-						<div class="col">
-							<h4>Empresa XPTO</h4>
-							<p>Descricao</p>
-						</div>
+					<div class="card-body">
+					  <h5 class="card-title">TÍTULO DA ATIVIDADE</h5>
+					  <p class="card-text">DESCRIÇÃO DA ATIVIDADE.</p>
+					  <a href="#" class="btn btn-primary">Visualizar</a>
 					</div>
-					<div class="row novidades mt-2">
-						<div class="col">
-							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
-						</div>
-						<div class="col">
-							<h4>Empresa XPTO</h4>
-							<p>Descricao</p>
-						</div>
+					<div class="card-footer text-muted">
+					  2 dias atrás
 					</div>
-					<div class="row novidades mt-2">
-						<div class="col">
-							<img src="brasil.jpg" class="img-fluid rounded logo-empresa">
-						</div>
-						<div class="col">
-							<h4>Empresa XPTO</h4>
-							<p>Descricao</p>
-						</div>
+				</div>
+				<div class="card text-center mt-2">
+					<div class="card-header">
+						<p>Status: <i>Concluída</i></p>
 					</div>
-
+					<div class="card-body">
+					  <h5 class="card-title">TÍTULO DA ATIVIDADE</h5>
+					  <p class="card-text">DESCRIÇÃO DA ATIVIDADE.</p>
+					  <a href="#" class="btn btn-primary">Visualizar</a>
+					</div>
+					<div class="card-footer text-muted">
+					  2 dias atrás
+					</div>
+				</div>
+				<div class="card text-center mt-2">
+					<div class="card-header">
+						<p>Status: <i>Concluída</i></p>
+					</div>
+					<div class="card-body">
+					  <h5 class="card-title">TÍTULO DA ATIVIDADE</h5>
+					  <p class="card-text">DESCRIÇÃO DA ATIVIDADE.</p>
+					  <a href="#" class="btn btn-primary">Visualizar</a>
+					</div>
+					<div class="card-footer text-muted">
+					  2 dias atrás
+					</div>
 				</div>
 			</div>
 
 			<!-- LISTAGEM DE EMPREENDIMENTOS -->
-			<div class="col-4 altura-conteiners bg-info">
-				<h4>LISTAGEM DE EMPREENDIMENTOS</h4>
-				<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
-				  <option selected>Selecione o empreendimento</option>
-				  <option value="1">Empresa XPTO</option>
-				  <option value="2">Empresa XPTO</option>
-				  <option value="3">Empresa XPTO</option>
-				</select>
-				<h5 class="d-flex justify-content-center">Nenhum empreendimento listado</h5>
+			<div id="div-listagem" class="col-5 altura-conteiners bg-info p-3">
+				<div class="row mb-2">
+					<div class="col-6">
+						<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
+							<option selected>Tipo</option>
+							<option value="1">Pré-Incubada</option>
+							<option value="2">Incubada</option>
+							<option value="3">Graduada</option>
+							<option value="3">Encerrada</option>
+						</select>
+					</div>
+					<div class="col-6">
+						<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
+							<option selected>Selecione o empreendimento</option>
+							<option value="1">Empresa XPTO</option>
+							<option value="2">Empresa XPTO</option>
+							<option value="3">Empresa XPTO</option>
+						</select>
+					</div>
+				</div>
+				<div class="d-flex justify-content-center">
+					<h5>Nenhum empreendimento listado</h5>
+				</div>
+				<div class="card text-center">
+					<div class="card-header">
+						<p class="text-end" style="">Status: <i>Incubada</i></p>
+						<ul class="nav nav-tabs card-header-tabs">
+						  <li class="nav-item">
+							<a class="nav-link active" aria-current="true" href="#">Descrição</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">Dados</a>
+						  </li>
+						</ul>
+					</div>
+					<div class="card-body">
+					  <h5 class="card-title">Empresa XPTO</h5>
+					  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus iusto explicabo odit nostrum blanditiis ipsum, magni, quia illo repellat doloribus quisquam, expedita cupiditate alias</p>
+					  <a href="#" class="btn btn-primary">Acessar Painel</a>
+					</div>
+					<div class="card-footer text-muted">
+					  Data de Incubação: 10/10/2010
+					</div>
+				</div>
 			</div>
 
 			<!-- OUTRAS FUNÇÕES -->
-			<div class="col-2 altura-conteiners bg-info rolagem">
-				<h4>OUTRAS FUNÇÕES</h4>
+			<div id="div-outras" class="col-2 altura-conteiners bg-info rolagem p-3">
 				<div class="d-grid mx-auto mt-2">
 					<button class="btn btn-primary" onclick="window.open('../cadastro-empreendimento/index.html','_blank')">
 						Cadastrar Empreendimento

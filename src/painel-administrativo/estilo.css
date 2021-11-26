@@ -6,29 +6,34 @@
 
 
 .altura-conteiners{
-	min-height: 300px;
-	max-height: 500px;
+	height: 430px;
 }
 .rolagem{
 	overflow-y: auto;
 }
 
 
-#funcionalidades > div:last-child{
-	background-color: red;
-}
-
-
 #div-relatorios{
 	background-color: lightgrey;
+	border-radius: 10px;
+	padding: 20px;
 
-	height: 500px;
+	height: 400px;
+}
+#div-novidades{
+	border-radius: 10px;
+}
+#div-listagem{
+	border-radius: 10px;
+}
+#div-outras{
+	border-radius: 5px;
 }
 
 
 .novidades{
-	background-color: grey;
+	background-color: lightblue;
 }
-.logo-empresa{
-	width: 100%;
+#card{
+	flex-flow: column wrap;
 }
