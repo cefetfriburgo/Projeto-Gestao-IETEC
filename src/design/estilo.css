@@ -1,0 +1,117 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+    background-color: rgb(199, 202, 201);
+}
+
+
+.altura-conteiners{
+	height: 430px;
+
+}
+.rolagem{
+	overflow-y: auto;
+    
+}
+
+/*
+.justify-content-around{
+    /* coluna que envolve todos os elementos de baixo
+}
+
+*/
+
+/* coluna da opção de seleção dos dois cards
+.col-6{
+    background-color: rgb(199, 12, 121); 
+}
+*/
+
+.div-relatorios{
+    background-color: rgb(78, 151, 127);
+    box-shadow: 3px 3px -1em 0 0.4em black;
+    /*box-shadow:  10px 10px 5px black;*/
+}
+
+
+
+.btn.btn-primary{
+    background-color: rgb(33, 104, 80);  
+}
+
+.form-select.form-selec-sm{
+    background-color:  rgb(199, 202, 201);
+
+
+}
+/* pra colocar a cor de fundo depois na parte da opção de selecionar
+.row mb-2{
+
+}
+*/
+.card-header{
+    
+    background-color: rgb(33, 104, 80);
+}
+.carde-title{
+    /*background-color: rgb(33, 104, 80);*/
+    background-color: rgb(78, 151, 127);
+}
+.card.text-center{
+    background-color: rgb(78, 151, 127);
+    /*background-color: rgb(33, 104, 80);  */
+}
+.card.footer{
+    background-color: rgb(33, 104, 80); 
+}
+.card-body{
+    border-top-width: 150 px;        /*define a espessura da borda superior*/
+    /*border-top-style: hidden;    /*define o estilo da borda superior*/
+    border-top-color: rgb(33, 104, 80);    /*define a cor da borda superior*/
+}
+#card{
+	flex-flow: column wrap;
+}
+#div-novidades{
+    border-radius: 10px;
+}
+.novidades{
+	background-color: rgb(73, 138, 108);
+    padding: 20 px;
+}
+
+
+
+h5{
+    background-color: rgb(33, 104, 80);
+}
+
+
+/*
+.d-flex.justify-content-center{
+    background-color: rgb(99, 104, 33);
+}
+*/
+
+
+#div-relatorios{
+	background-color: lightgrey;
+	border-radius: 10px;
+	padding: 20px;
+
+	height: 400px;
+}
+#div-relatorios.col-10{
+    background-color: rgb(78, 151, 127); 
+}
+
+#div-listagem{
+	border-radius: 10px;
+}
+#div-outras{
+	border-radius: 5px;
+}
+
+
+
