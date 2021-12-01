@@ -1,0 +1,22 @@
+body {
+    background-color:var(--background-default);
+}
+
+main {
+    display:flex;
+    width:960px;
+    margin: auto;
+    align-items:center;
+}
+
+fieldset {
+    background:var(--panel-default);
+}
+
+h1 {
+    font-size:1.3rem;
+}
+
+.form-login {
+    margin:10px;
+}

@@ -1,0 +1,23 @@
+.btn {
+    border:none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    margin: 10px 5px;
+}
+
+.btn-primary {
+    background-color: var(--background-blue);
+    color:#fff;
+}
+.btn-primary:hover {
+    background-color: var(--background-active-blue);
+}
+
+.btn-default {
+    background-color: var(--background-default);
+}
+
+.btn-default:hover {
+    background-color: var(--background-active-default);
+}
