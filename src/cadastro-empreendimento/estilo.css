@@ -5,11 +5,11 @@ body{
     background-color: lightblue;
     border-radius: 5px;
 
-    height: 350px;
+    min-height: 350px;
 }
 .cadastro-inferior{
     background-color: lightblue;
     border-radius: 5px;
 
-    height: 250px;
+    min-height: 250px;
 }

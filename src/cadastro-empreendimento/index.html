@@ -5,12 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<title>IETEC | Cadastrar Empreendimento</title>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="container px-5">
+			<div class="d-flex flex-row">
+				<a href="../painel-administrativo/index.html">Painel Administrativo</a>
+				<p> | </p>
+				<a href="#">Cadastro Empreendimento</a>
+			</div>
 			<form action="">
 				<legend class="mt-5">Cadastro de Empreendimento | IETEC</legend>
 				<div class="row cadastro-superior mb-2 p-4">
@@ -24,13 +30,13 @@
 							<div class="col-sm">
 								<div class="form-check">
 									<label class="form-check-label" for="flexRadio" for="piRadio">Pré-Incubação</label>
-									<input class="form-check-input" type="radio" name="flexRadio" id="piRadio">
+									<input id="p-incubada" class="form-check-input" type="radio" name="flexRadio" id="piRadio">
 								</div>
 							</div>
 							<div class="col-sm">	
 								<div class="form-check">
 									<label class="form-check-label" for="iRadio">Incubação</label>
-									<input class="form-check-input" type="radio" name="flexRadio" id="iRadio">
+									<input id="incubada" class="form-check-input" type="radio" name="flexRadio" id="iRadio">
 								</div>
 							</div>
 							<div class="col-sm">
@@ -40,7 +46,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-10">
+							<div class="col-10 float-left">
 								<label for="sigla-marca" >Sigla/Marca*</label>
 								<input id="sigla-marca" class="form-control form-control-sm mb-1" type="text" placeholder="Sigla/Marca">
 								<label for="razaoSocial-nome" >Razão Social/Nome*</label>
@@ -49,25 +55,25 @@
 						</div>
 						<div class="row">
 							<div class="col-5">
-								<label for="cpf" >CPF*</label>
-								<input id="cpf" class="form-control form-control-sm" type="text">
-								<div class="form-text"></div>
+								<label for="cpf">CPF*</label>
+								<input id="cpf" class="form-control form-control-sm" type="text" disabled>
+								<div class="form-text">CPF do líder do empreendimento.</div>
 							</div>
 							<div class="col-5">
 								<label  for="cnpj" >CNPJ*</label>
-								<input id="cnpj" class="form-control form-control-sm" type="text">
+								<input id="cnpj" class="form-control form-control-sm" type="text" disabled>
 								<div class="form-text"></div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-5">
 								<label for="cnae" >CNAE*</label>
-								<input id="cnae" class="form-control form-control-sm" type="text">
+								<input id="cnae" class="form-control form-control-sm" type="text" disabled>
 								<div class="form-text"></div>
 							</div>
 							<div class="col-5">
 								<label for="inscricaoEstadual" >Inscrição Estadual*</label>
-								<input id="inscricaoEstadual" class="form-control form-control-sm" type="text">
+								<input id="inscricaoEstadual" class="form-control form-control-sm" type="text" disabled>
 								<div class="form-text"></div>
 							</div>
 						</div>
@@ -78,13 +84,13 @@
 						<div class="form-floating">
 							<input id="cep" class="form-control" type="text" placeholder="CEP">
 							<label  for="cep">CEP*</label>
+							<div class="form-text">Insira o CEP</div>
 						</div>
-						<div class="form-text">Insira o CEP</div>
-						<input class="form-control form-control-sm mt-2" type="text" placeholder="Endereço" disable readonly>
-						<input 	id="numero" class="form-control form-control-sm mt-1" type="number" placeholder="Número" disable readonly>
-						<input id="complemento" class="form-control form-control-sm mt-1" type="text" placeholder="Complemento" disable readonly>
-						<input id="bairro" class="form-control form-control-sm mt-1" type="text" placeholder="Bairro" disable readonly>
-						<input id="municipio" class="form-control form-control-sm mt-1" type="text" placeholder="Município" disable readonly>
+						<input class="form-control form-control-sm mt-2" type="text" placeholder="Endereço" readonly>
+						<input 	id="numero" class="form-control form-control-sm mt-1" type="number" placeholder="Número" readonly>
+						<input id="complemento" class="form-control form-control-sm mt-1" type="text" placeholder="Complemento" readonly>
+						<input id="bairro" class="form-control form-control-sm mt-1" type="text" placeholder="Bairro" readonly>
+						<input id="municipio" class="form-control form-control-sm mt-1" type="text" placeholder="Município" readonly>
 						<div class="form-text">Preenchimento automático de endereço</div>
 					</div>
 				</div>
@@ -128,14 +134,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col">
-						<label class="btn btn-success mt-3" for="cadastrar">Cadastrar</label>
-						<input type="submit" class="btn-check" id="cadastrar" checked>
-					</div>
+				<div class="d-flex flex-row-reverse">
+					<label class="btn btn-success mt-3" for="cadastrar">Cadastrar</label>
+					<input type="submit" class="btn-check" id="cadastrar" checked>
 				</div>
 			</form>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function() {
+			$("#p-incubada").click(function (){
+				$("#cpf").prop("disabled", false);
+				$("#cnpj").prop("disabled", true);
+				$("#inscricaoEstadual").prop("disabled", true);
+				$("#cnae").prop("disabled", true);
+			});
+			
+			$("#incubada").click(function (){
+				$("#cpf").prop("disabled", true);
+				$("#cnpj").prop("disabled", false);
+				$("#inscricaoEstadual").prop("disabled", false);
+				$("#cnae").prop("disabled", false);
+			});
+		});
+	</script>
 </body>
-</html>        
+</html>
