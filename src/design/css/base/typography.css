@@ -40,3 +40,9 @@ p {
     font-family: Roboto;
     font-size: small;
 }
+
+label{
+    font-size: 1rem;
+    letter-spacing: .02rem;
+    font-family: 'Lato', Roboto, sans-serif;
+}

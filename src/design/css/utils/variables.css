@@ -1,11 +1,17 @@
 :root {
     --background-yellow: #ffa600;
-    --background-active-blue: #58508d;
-    --background-blue: #9086b9;
+
+    --background-inactive-purple: #58508d;
+    --background-purple: #9086b9;
+
+    --background-light-purple: #c9c0e7;
+
+    --background-blue: #9cc3dc;
     --background-default: #ccc;
     --background-active-default: #eee;
 
     --panel-blue: #789fba;
     --panel-white: #fffff;
     --panel-default: #f7f7f7;
+    --panel-purple: #c9c0e7;
 }
