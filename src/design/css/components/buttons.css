@@ -6,12 +6,12 @@
     margin: 10px 5px;
 }
 
-.btn-primary {
-    background-color: var(--background-blue);
+.btn-success {
+    background-color: var(--background-inactive-purple);
     color:#fff;
 }
-.btn-primary:hover {
-    background-color: var(--background-active-blue);
+.btn-success:hover {
+    background-color: var(--background-purple);
 }
 
 .btn-default {

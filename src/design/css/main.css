@@ -5,17 +5,26 @@
 
 @import url(./components/panel.css);
 @import url(./components/buttons.css);
+@import url(./components/icons.css);
 
 .cores {
     box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
+
 .amarelo {
     background-color: var(--background-yellow);
 }
-.azul-ativo {
-    background-color: var(--background-active-blue);
-}
-.azul-inativo {
-    background-color: var(--background-inactive-blue);
+
+.cinza{
+    background-color: var(--background-default);
 }
 
+/* DIVS PRINCIPAIS */
+.azul{
+    background-color: var(--background-blue);
+}
+
+/* BODYS */
+.branco{
+    background-color: var(--background-active-default);
+}
