@@ -41,5 +41,5 @@ INSERT INTO Grupo_has_Permissao VALUES ( 2 , 2 );
 -- -------------------------------------------------------
 -- USUARIOS
 -- -------------------------------------------------------
-INSERT INTO Usuário VALUES (  1 , 1, "marcelo.testando@fabrica.org.br", '123');
+INSERT INTO Usuario VALUES (  1 , 1, "marcelo.testando@fabrica.org.br", AES_ENCRYPT('123', 'token') );
 
