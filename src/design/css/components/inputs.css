@@ -1,3 +1,46 @@
-input{
+#data
+{
+    padding: 10px;
+    border: 2px solid #808080; 
+    border-radius: 10px;
+    width:50%;
+    height:80%;
+}
 
+#p-incubada, #incubada
+{
+    border: 2px solid #808080; 
+}
+
+#logoEmpresa
+{
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #808080; 
+    border-radius: 10px;
+    width:80%;  
+}
+
+#comentario
+{
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #808080; 
+    border-radius: 10px;
+    width:80%; 
+    height: 130px;
+}
+
+.signup-text-input
+{
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    width:100%;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #808080;
 }

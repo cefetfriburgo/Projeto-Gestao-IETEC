@@ -12,36 +12,36 @@
 	<title>IETEC | Cadastrar Empreendimento</title>
 </head>
 <body class="branco">
-	<div class="progress fixed-top" style="background-color: transparent;">
-		<div id="myBar" class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">25%</div>
-	</div>
+	<meter class="fixed-top" id="progress" min="0" max="100" low="25" high="50" optimum="75" value="25"></meter>
+
 	<div class="d-flex flex-row mt-5">
 		<a href="./painel-administrativo/index.html">Painel Administrativo</a>
 		<p> / </p>
 		<a href="#">Cadastro Empreendimento</a>
 	</div>
+
 	<div class="container">
-		<h1 class="mt-5">Cadastro de Empreendimento | IETEC</h1>
-		<hr>
+		<h1 class="mt-5 mb-3">Cadastro de Empreendimento | IETEC</h1>
+		
 		<form action="">
 			<!-- PRIMEIRA TELA DE CADASTRO -->
 			<div class="row justify-content-center cadastro-superior mb-5 cinza">
 				<h3 class="p-3">Primeira Etapa | Informações Técnicas</h3>
+				<hr style="margin-top: -30px;">
 				<div class="col-8" style="position: relative;">
 					<div class="row mb-3">
-						<div class="col-5">
-							<select class="form-select form-selec-sm">
+						<div class="col-6">
+							<select class="form-select form-selec-sm signup-text-input">
 								<option selected>Fase de Incubação</option>
 								<option value="1" id="p-incubada">Pré-Incubada</option>
 								<option value="2" id="incubada">Incubada</option>
 							</select>
 						</div>
 						<div class="col"> <!-- A DATA DE CADASTRO SERÁ ENVIADA AUTOMATICAMENTE -->
-							<label class="form-check-label" for="data">Data Atual</label>
 							<input class="form-check-input" type="datetime-local" id="data">
 						</div>
 						<div class="row">
-							<div class="col-5">
+							<div class="col-6">
 								<div class="form-text">*Fase de incubação</div>
 							</div>
 							<div class="col">
@@ -52,31 +52,31 @@
 					<div class="row mb-3">
 						<div class="col-10 float-left">
 							<label for="sigla-marca" >Sigla/Marca*</label>
-							<input id="sigla-marca" class="form-control form-control-sm mb-1" type="text" placeholder="Sigla/Marca">
+							<input id="sigla-marca" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Sigla/Marca">
 							<label for="razaoSocial-nome" >Razão Social/Nome*</label>
-							<input id="razaoSocial-nome" class="form-control form-control-sm mb-1" type="text" placeholder="Razão Social/Nome">
+							<input id="razaoSocial-nome" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Razão Social/Nome">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-5">
 							<label for="cpf">CPF*</label>
-							<input id="cpf" class="form-control form-control-sm" type="text" disabled>
+							<input id="cpf" class="form-control form-control-sm signup-text-input" type="text" disabled>
 						</div>
 						<div class="col-5">
 							<label  for="cnpj" >CNPJ*</label>
-							<input id="cnpj" class="form-control form-control-sm" type="text" disabled>
+							<input id="cnpj" class="form-control form-control-sm signup-text-input" type="text" disabled>
 							<div class="form-text"></div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-5">
 							<label for="cnae" >CNAE*</label>
-							<input id="cnae" class="form-control form-control-sm" type="text" disabled>
+							<input id="cnae" class="form-control form-control-sm signup-text-input" type="text" disabled>
 							<div class="form-text"></div>
 						</div>
 						<div class="col-5">
 							<label for="inscricaoEstadual" >Inscrição Estadual*</label>
-							<input id="inscricaoEstadual" class="form-control form-control-sm" type="text" disabled>
+							<input id="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" disabled>
 							<div class="form-text"></div>
 						</div>
 					</div>
@@ -86,17 +86,18 @@
 			<!-- SEGUNDA TELA DE CADASTRO -->
 			<div class="row justify-content-center cadastro-superior mb-5 p-4 azul" id="segunda-sessao">
 				<h3>Segunda Etapa | Endereço</h3>
+				<hr style="margin-top: -30px;">
 				<div class="col-6">
 					<div class="form-floating">
-						<input id="cep" class="form-control" type="text" placeholder="CEP">
+						<input id="cep" class="form-control signup-text-input" type="text" placeholder="CEP">
 						<label  for="cep">CEP*</label>
 						<div class="form-text">Insira o CEP</div>
 					</div>
-					<input class="form-control form-control-sm mt-2" type="text" placeholder="Endereço" readonly>
-					<input 	id="numero" class="form-control form-control-sm mt-1" type="number" placeholder="Número" readonly>
-					<input id="complemento" class="form-control form-control-sm mt-1" type="text" placeholder="Complemento" readonly>
-					<input id="bairro" class="form-control form-control-sm mt-1" type="text" placeholder="Bairro" readonly>
-					<input id="municipio" class="form-control form-control-sm mt-1" type="text" placeholder="Município" readonly>
+					<input class="form-control form-control-sm mt-2 signup-text-input" type="text" placeholder="Endereço" readonly>
+					<input 	id="numero" class="form-control form-control-sm mt-1 signup-text-input" type="number" placeholder="Número" readonly>
+					<input id="complemento" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Complemento" readonly>
+					<input id="bairro" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Bairro" readonly>
+					<input id="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" readonly>
 					<div class="form-text">Preenchimento automático de endereço</div>
 				</div>
 			</div>
@@ -104,21 +105,23 @@
 			<!-- TERCEIRA TELA DE CADASTRO -->
 			<div class="row justify-content-center cadastro-superior mb-5 p-4 azul">
 				<h3>Terceira Etapa | Contatos</h3>
+				<hr style="margin-top: -40px;">
 				<div class="col-5">
 					<label  for="phone">Telefone</label>
-					<input type="tel" id="phone" name="phone" placeholder="(XX)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}\-[0-9]{4}" class="form-control form-control-sm mb-1">
+					<input type="tel" id="phone" name="phone" placeholder="(XX)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}\-[0-9]{4}" class="form-control form-control-sm mb-1 signup-text-input">
 					<label for="celular">Celular*</label>
-					<input id="celular" class="form-control form-control-sm mb-1" type="tel">
+					<input id="celular" class="form-control form-control-sm mb-1 signup-text-input" type="tel">
 					<label for="e-mail" >E-mail</label>
-					<input id="e-mail" class="form-control form-control-sm mb-1" type="email">
+					<input id="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email">
 					<label for="website" >Website</label>
-					<input id="website" class="form-control form-control-sm mb-1" type="url">
+					<input id="website" class="form-control form-control-sm mb-1 signup-text-input" type="url">
 				</div>
 			</div>
 
 			<!-- ÚLTIMA TELA DE CADASTRO -->
 			<div class="row cadastro-superior mb-5 p-4 azul justify-content-center">
 				<h3>Última Etapa | Opcionais</h3>
+				<hr style="margin-top: -70px;">
 				<div class="col-6">
 					<label  for="logoEmpresa">Adicione uma logo para o empreendimento</label>
 					<input class="form-control form-control-sm mb-4" type="file" id="logoEmpresa">
@@ -131,52 +134,29 @@
 
 			<!-- BOTÃO INFERIOR -->
 			<div class="d-flex flex-row-reverse">
-				<label class="btn btn-success " for="cadastrar">
-					<i class="far fa-address-card"> CADASTRAR</i>
+				<label class="btn btn-success" for="cadastrar">
+					<i class="far fa-address-card">Cadastrar</i>
 				</label>
 				<input type="submit" class="btn-check" id="cadastrar" checked>
 			</div>
 		</form>
 	</div>
-	<script>
-		$(document).ready(function() {
-			$("#p-incubada").click(function (){
-				$("#cpf").prop("disabled", false);
-				$("#cnpj").prop("disabled", true);
-				$("#inscricaoEstadual").prop("disabled", true);
-				$("#cnae").prop("disabled", true);
-			});
-			
-			$("#incubada").click(function (){
-				$("#cpf").prop("disabled", true);
-				$("#cnpj").prop("disabled", false);
-				$("#inscricaoEstadual").prop("disabled", false);
-				$("#cnae").prop("disabled", false);
-			});
-		});
-	</script>
-	<script>
-		var i = 0;
-		function move() {
-			if (i == 0) {
-				i = 1;
-				var elem = document.getElementById("myBar");
-				var width = 25;
-				var id = setInterval(frame, 25);
-				function frame() {
-					if (width >= 100) {
-						clearInterval(id);
-						i = 0;
-					}
-					else {
-						width = width + 25;
-						elem.style.width = width + "%";
-						elem.innerHTML = width + "%";
-						elem.ariaValueNow = width;
-					}
-				}
-			}
-		}
-	</script>
 </body>
+<script>
+	$(document).ready(function() {
+		$("#p-incubada").click(function (){
+			$("#cpf").prop("disabled", false);
+			$("#cnpj").prop("disabled", true);
+			$("#inscricaoEstadual").prop("disabled", true);
+			$("#cnae").prop("disabled", true);
+		});
+		
+		$("#incubada").click(function (){
+			$("#cpf").prop("disabled", true);
+			$("#cnpj").prop("disabled", false);
+			$("#inscricaoEstadual").prop("disabled", false);
+			$("#cnae").prop("disabled", false);
+		});
+	});
+</script>
 </html>

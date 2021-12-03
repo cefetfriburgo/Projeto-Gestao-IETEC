@@ -1,11 +1,16 @@
 @import url(./utils/variables.css);
 
 @import url(./base/reset.css);
+
 @import url(./base/typography.css);
 
 @import url(./components/panel.css);
 @import url(./components/buttons.css);
 @import url(./components/icons.css);
+@import url(./components/inputs.css);
+@import url(./components/meter.css);
+
+
 
 .cores {
     box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);

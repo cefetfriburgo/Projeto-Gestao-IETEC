@@ -1,6 +1,7 @@
 .cadastro-superior{
     border-radius: 4px;
     min-height: 550px;
+    box-shadow: 3px 3px 2px 2px rgb(0,0,0,0.2);
 }
 
 /* TAMANHO DAS TELAS DE CADASTRO */
