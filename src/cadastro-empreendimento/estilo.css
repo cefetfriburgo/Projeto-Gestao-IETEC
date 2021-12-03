@@ -1,13 +1,11 @@
-body{
-    background-color: lightgoldenrodyellow;
-}
 .cadastro-superior{
     border-radius: 4px;
-
-    min-height: 350px;
+    min-height: 550px;
 }
-.cadastro-inferior{
-    border-radius: 4px;
 
-    min-height: 250px;
-}
+/* TAMANHO DAS TELAS DE CADASTRO */
+@media (min-width: 1200px) {
+    .container{
+        max-width: 900px;
+    }
+} 
