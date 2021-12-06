@@ -21,3 +21,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.far.fa-arrow-alt-circle-right{
+    font-size: 34px;
+    color: #ddd;
+}

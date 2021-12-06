@@ -24,6 +24,19 @@
     background-color: var(--background-default);
 }
 
+.azul0{
+    background-color: var(--background-blue0);
+}
+
+.azul2{
+    background-color: var(--background-blue2);
+}
+
+.azul3{
+    background-color: var(--background-blue3);
+}
+
+
 /* DIVS PRINCIPAIS */
 .azul{
     background-color: var(--background-blue);
