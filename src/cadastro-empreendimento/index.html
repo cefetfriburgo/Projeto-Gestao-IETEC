@@ -23,7 +23,7 @@
 	<div class="container">
 		<h1 class="mt-5 mb-3">Cadastro de Empreendimento | IETEC</h1>
 		
-		<form action="">
+		<form action="insert.php" method="POST">
 			<!-- PRIMEIRA TELA DE CADASTRO -->
 			<div class="row justify-content-center cadastro-superior mb-5 cinza">
 				<h3 class="p-3">Primeira Etapa | Informações Técnicas</h3>
@@ -33,12 +33,12 @@
 						<div class="col-6">
 							<select class="form-select form-selec-sm signup-text-input">
 								<option selected>Fase de Incubação</option>
-								<option value="1" id="p-incubada">Pré-Incubada</option>
-								<option value="2" id="incubada">Incubada</option>
+								<option value="1" name="p-incubada" id="p-incubada">Pré-Incubada</option>
+								<option value="2" name="incubada" id="incubada">Incubada</option>
 							</select>
 						</div>
 						<div class="col"> <!-- A DATA DE CADASTRO SERÁ ENVIADA AUTOMATICAMENTE -->
-							<input class="form-check-input" type="datetime-local" id="data">
+							<input class="form-check-input" type="datetime-local" name="data" id="data">
 						</div>
 						<div class="row">
 							<div class="col-6">
@@ -52,31 +52,31 @@
 					<div class="row mb-3">
 						<div class="col-10 float-left">
 							<label for="sigla-marca" >Sigla/Marca*</label>
-							<input id="sigla-marca" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Sigla/Marca">
+							<input name="sigla-marca" id="sigla-marca" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Sigla/Marca">
 							<label for="razaoSocial-nome" >Razão Social/Nome*</label>
-							<input id="razaoSocial-nome" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Razão Social/Nome">
+							<input name="razaoSocial-nome" id="razaoSocial-nome" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Razão Social/Nome">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-5">
 							<label for="cpf">CPF*</label>
-							<input id="cpf" class="form-control form-control-sm signup-text-input" type="text" disabled>
+							<input name="cpf" id="cpf" class="form-control form-control-sm signup-text-input" type="text" disabled>
 						</div>
 						<div class="col-5">
 							<label  for="cnpj" >CNPJ*</label>
-							<input id="cnpj" class="form-control form-control-sm signup-text-input" type="text" disabled>
+							<input name="cnpj" id="cnpj" class="form-control form-control-sm signup-text-input" type="text" disabled>
 							<div class="form-text"></div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-5">
 							<label for="cnae" >CNAE*</label>
-							<input id="cnae" class="form-control form-control-sm signup-text-input" type="text" disabled>
+							<input id="cnae" name="cnae" class="form-control form-control-sm signup-text-input" type="text" disabled>
 							<div class="form-text"></div>
 						</div>
 						<div class="col-5">
 							<label for="inscricaoEstadual" >Inscrição Estadual*</label>
-							<input id="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" disabled>
+							<input id="inscricaoEstadual" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" disabled>
 							<div class="form-text"></div>
 						</div>
 					</div>
@@ -89,15 +89,15 @@
 				<hr style="margin-top: -30px;">
 				<div class="col-6">
 					<div class="form-floating">
-						<input id="cep" class="form-control signup-text-input" type="text" placeholder="CEP">
+						<input id="cep" name="cep" class="form-control signup-text-input" type="text" placeholder="CEP">
 						<label  for="cep">CEP*</label>
 						<div class="form-text">Insira o CEP</div>
 					</div>
-					<input class="form-control form-control-sm mt-2 signup-text-input" type="text" placeholder="Endereço" readonly>
-					<input 	id="numero" class="form-control form-control-sm mt-1 signup-text-input" type="number" placeholder="Número" readonly>
-					<input id="complemento" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Complemento" readonly>
-					<input id="bairro" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Bairro" readonly>
-					<input id="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" readonly>
+					<input id="endereco" name="endereco" class="form-control form-control-sm mt-2 signup-text-input" type="text" placeholder="Endereço" readonly>
+					<input id="numero" name = "numero" class="form-control form-control-sm mt-1 signup-text-input" type="number" placeholder="Número" readonly>
+					<input id="complemento" name="complemento" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Complemento" readonly>
+					<input id="bairro" name="bairro" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Bairro" readonly>
+					<input id="municipio" name="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" readonly>
 					<div class="form-text">Preenchimento automático de endereço</div>
 				</div>
 			</div>
@@ -110,11 +110,11 @@
 					<label  for="phone">Telefone</label>
 					<input type="tel" id="phone" name="phone" placeholder="(XX)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}\-[0-9]{4}" class="form-control form-control-sm mb-1 signup-text-input">
 					<label for="celular">Celular*</label>
-					<input id="celular" class="form-control form-control-sm mb-1 signup-text-input" type="tel">
+					<input id="celular" name="celular" class="form-control form-control-sm mb-1 signup-text-input" type="tel">
 					<label for="e-mail" >E-mail</label>
-					<input id="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email">
+					<input id="e-mail" name="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email">
 					<label for="website" >Website</label>
-					<input id="website" class="form-control form-control-sm mb-1 signup-text-input" type="url">
+					<input id="website" name="website" class="form-control form-control-sm mb-1 signup-text-input" type="url">
 				</div>
 			</div>
 
@@ -124,9 +124,9 @@
 				<hr style="margin-top: -70px;">
 				<div class="col-6">
 					<label  for="logoEmpresa">Adicione uma logo para o empreendimento</label>
-					<input class="form-control form-control-sm mb-4" type="file" id="logoEmpresa">
+					<input class="form-control" name= "logoEmpresa" form-control-sm mb-4 type="file" id="logoEmpresa">
 					<div class="form-floating">
-						<textarea class="form-control form-control" placeholder="" id="comentario" style="max-height: 300px"></textarea>
+						<textarea class="form-control form-control" name="comentario" placeholder="" id="comentario" style="max-height: 300px"></textarea>
 						<label for="comentario">Adicione um comentário</label>
 					</div>
 				</div>
