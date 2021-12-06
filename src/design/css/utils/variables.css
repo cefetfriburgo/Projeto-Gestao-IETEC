@@ -6,9 +6,15 @@
 
     --background-light-purple: #c9c0e7;
 
+    
     --background-blue: #9cc3dc;
     --background-default: #ccc;
     --background-active-default: #eee;
+
+    --background-blue0: #a7d6f5a8; 
+    --background-blue2: #789fba;
+    --background-blue3: #547e9a;
+
 
     --panel-blue: #789fba;
     --panel-white: #fffff;
