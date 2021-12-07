@@ -42,7 +42,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `mydb`.`Empresa` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Empresa` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `tipo` ENUM("p", "i", "g", "d") NOT NULL COMMENT '\"p\" = Pré-incubada\n\"i\" = Incubada\n\"g\" = Graduada\n\"d\" = Desligada',
   `nome_fantasia` VARCHAR(45) NOT NULL,
   `cpf` VARCHAR(45) NULL,
