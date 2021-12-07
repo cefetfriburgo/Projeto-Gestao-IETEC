@@ -1,62 +1,16 @@
-.btn {
-    border:none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
-    padding: 5px 10px;
-    margin: 10px 5px;
-}
+.estilo_botao {
+    color: #fff;
+    font-weight: bold;
 
-.btn-success {
-    background-color: var(--background-inactive-purple);
-    color:#fff;   
-}
-.btn-success:hover {
-    background-color: var(--background-purple);
-}
-
-.btn-default {
     background-color: var(--background-default);
 }
-
-.btn-default:hover {
+.estilo_botao:hover {
     background-color: var(--background-active-default);
+    color: #fff;
 }
-/*
-.botao{
-    font-family: 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
-}
-*/
-.botao {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    height: 0;
-    line-height: 0;
-    color: #FFFFFF;
-    font-family: 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
-    width: 180px;
-    font-size: 18px;
-    font-weight: 100;
-    padding: 11px 20px 40px 9px;
-    margin: 2px 1px;
-    background-color: #003F5C;
-    -webkit-box-shadow: 1px 1px 20px 0 #5E6264;
-    -moz-box-shadow: 1px 1px 20px 0 #5E6264;
-    box-shadow: 1px 1px 20px 0 #5E6264;
-    text-shadow: 1px 1px 20px #000000;
-    border: solid #003F5C 1px;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
- }
- 
- .botao:hover {
-    background: #305D7A;
-    border: solid #0000 1px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    text-decoration: none;
- }
 
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

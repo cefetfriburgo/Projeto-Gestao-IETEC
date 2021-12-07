@@ -1,23 +1,21 @@
 :root {
+    --background-body: #ccc;
+
     --background-yellow: #ffa600;
 
     --background-inactive-purple: #58508d;
     --background-purple: #9086b9;
-
     --background-light-purple: #c9c0e7;
 
-    
-    --background-blue: #9cc3dc;
-    --background-default: #ccc;
-    --background-active-default: #eee;
+    --background-default: #003F5C;
+    --background-active-default: #305D7A;
 
-    --background-blue0: #a7d6f5a8; 
-    --background-blue2: #789fba;
-    --background-blue3: #547e9a;
+    --panel-blue1: #a7d6f5a8;
+    --panel-blue2: #9cc3dc;
+    --panel-blue3: #789fba;
+    --panel-blue4: #547e9a;
 
-
-    --panel-blue: #789fba;
-    --panel-white: #fffff;
+    --panel-white: #fff;
     --panel-default: #f7f7f7;
     --panel-purple: #c9c0e7;
 }

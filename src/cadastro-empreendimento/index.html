@@ -12,25 +12,28 @@
 	<title>IETEC | Cadastrar Empreendimento</title>
 </head>
 <body class="branco">
-	<meter class="fixed-top" id="progress" min="0" max="100" low="25" high="50" optimum="75" value="25"></meter>
-
+	<!-- 
 	<div class="d-flex flex-row mt-5">
 		<a href="./painel-administrativo/index.html">Painel Administrativo</a>
 		<p> / </p>
 		<a href="#">Cadastro Empreendimento</a>
 	</div>
+	-->
 
 	<div class="container">
-		<h1 class="mt-5 mb-3">Cadastro de Empreendimento | IETEC</h1>
+		<h1 class="mt-5 mb-5">Cadastro de Empreendimento | IETEC</h1>
 		
 		<form action="insert.php" method="POST">
 			<!-- PRIMEIRA TELA DE CADASTRO -->
-			<div class="row justify-content-center cadastro-superior mb-5 azul0">
-				<h3 class="p-3 fas fa-file-alt"> Primeira Etapa | Informações Técnicas</h3>
-				<div class="col-8" style="position: relative;">
-					<div class="row mb-3">
-						<div class="col-5">
-							<select class="form-select form-selec-sm signup-text-input">
+			<div class="row justify-content-center tela-cadastro mb-5 p-4 azul1">
+				<div class="d-flex flex-row pb-3">
+					<i class="fas fa-file-alt"></i>
+					<h3> Primeira Etapa | Informações Técnicas</h3>
+				</div>
+				<div class="col-8">
+					<div class="row">
+						<div class="col">
+							<select class="form-select form-selec-sm signup-text-input" required>
 								<option value="200" id="fase" selected>Fase de Incubação</option>
 								<option value="" id="p-incubada">Pré-Incubada</option>
 								<option value="" id="incubada">Incubada</option>
@@ -38,58 +41,60 @@
 							<div class="form-text" id="fase_text"></div>
 						</div>
 						<div class="col"> <!-- A DATA DE CADASTRO SERÁ ENVIADA AUTOMATICAMENTE -->
-							<input class="form-check-input" type="datetime-local" name="data" id="data">
+							<input class="form-check-input" type="datetime-local" name="data" id="data" style="height: 50px;width: 250px;">
 						</div>
 					</div>
-					<div class="row mb-3">
-						<div class="col-10 float-left">
-							<label for="sigla-marca" >Sigla/Marca</label>
+					<div class="row">
+						<div class="col float-left">
+							<label for="sigla-marca">Sigla/Marca</label>
 							<input name="sigla-marca" id="sigla-marca" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Sigla/Marca">
 							<div class="form-text" id="sigla-marca_text"></div>
-							<label for="razaoSocial-nome" >Razão Social/Nome</label>
+							<label for="razaoSocial-nome">Razão Social/Nome</label>
 							<input name="razaoSocial-nome" id="razaoSocial-nome" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Razão Social/Nome">
 							<div class="form-text" id="razaoSocial-nome_text"></div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-5">
-							<label for="cpf">CPF</label>
-							<input name="cpf" id="cpf" class="form-control form-control-sm signup-text-input" type="text" placeholder="CPF" disabled>
+						<div class="col">
+							<label for="cpf_input">CPF</label>
+							<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" maxlength="14" disabled>
 							<div class="form-text" id="cpf_text"></div>
 						</div>
-						<div class="col-5">
-							<label  for="cnpj" >CNPJ</label>
-							<input name="cnpj" id="cnpj" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNPJ" disabled>
+						<div class="col">
+							<label  for="cnpj_input">CNPJ</label>
+							<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2})/" maxlength="18" disabled>
 							<div class="form-text" id="cnpj_text"></div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-5">
-							<label for="cnae" >CNAE</label>
-							<input id="cnae" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE" disabled>
+						<div class="col">
+							<label for="cnae_input">CNAE</label>
+							<input id="cnae_input" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE" disabled>
 							<div class="form-text" id="cnae_text"></div>
 						</div>
-						<div class="col-5">
-							<label for="inscricaoEstadual" >Inscrição Estadual</label>
-							<input id="inscricaoEstadual" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual" disabled>
+						<div class="col">
+							<label for="inscricaoEstadual_input">Inscrição Estadual</label>
+							<input id="inscricaoEstadual_input" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual" disabled>
 							<div class="form-text" id="inscricaoEstadual_text"></div>
 						</div>
 					</div>
-					<div class="d-flex flex-row-reverse mt-2">
-						<button type="button" class="btn btn-success" onclick="validaPrimeiraSessao()" id="btn_avanco">Avançar</button>
-					</div>
 				</div>
-				<div class="segunda_sessao"></div>
+				<div class="d-flex flex-row-reverse mt-2">
+					<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+				</div>
 			</div>
 
 			<!-- SEGUNDA TELA DE CADASTRO -->
-			<div class="row justify-content-center cadastro-superior mb-5 p-4 azul" id="segunda-sessao">
-				<h3 class="fas fa-map-marker-alt"> Segunda Etapa | Endereço</h3>
+			<div class="row justify-content-center tela-cadastro mb-5 p-4 azul2" id="segunda-sessao">
+				<div class="d-flex flex-row pb-3">
+					<i class="fas fa-map-marker-alt"></i>
+					<h3>Segunda Etapa | Endereço</h3>
+				</div>
 				<div class="col-6">
 					<div class="form-floating">
-						<input id="cep" name="cep" class="form-control signup-text-input" type="text" placeholder="CEP">
-						<label  for="cep">CEP</label>
-						<div class="form-text">Insira o CEP</div>
+						<input id="cep_input" name="cep" class="form-control signup-text-input" type="text" inputmode="numeric" placeholder="CEP">
+						<label  for="cep_input">CEP</label>
+						<div class="form-text" id="cep_text">Insira o CEP</div>
 					</div>
 					<input id="endereco" name="endereco" class="form-control form-control-sm mt-2 signup-text-input" type="text" placeholder="Endereço" readonly>
 					<input id="numero" name = "numero" class="form-control form-control-sm mt-1 signup-text-input" type="number" placeholder="Número" readonly>
@@ -98,43 +103,57 @@
 					<input id="municipio" name="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" readonly>
 					<div class="form-text">Preenchimento automático de endereço</div>
 				</div>
-				<div class="terceira_sessao"></div>
+				<div class="d-flex flex-row-reverse mt-2">
+					<button type="button" class="btn estilo_botao" onclick="validaSegundaSessao()">Validar</button>
+				</div>
 			</div>
 
 			<!-- TERCEIRA TELA DE CADASTRO -->
-			<div class="row justify-content-center cadastro-superior mb-5 p-4 azul2">
-				<h3 class="fas fa-phone-square-alt"> Terceira Etapa | Contatos</h3>
+			<div class="row justify-content-center tela-cadastro mb-5 p-4 azul3">
+				<div class="d-flex flex-row pb-3">
+					<i class="fas fa-phone-square-alt"></i>
+					<h3>Terceira Etapa | Contatos</h3>
+				</div>
 				<div class="col-5">
-					<label  for="phone">Telefone</label>
-					<input type="tel" id="telefone" name="telephone" placeholder="(XX)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}\-[0-9]{4}" class="form-control form-control-sm mb-1 signup-text-input">
-					<label for="celular">Celular</label>
-					<input type="tel" id="celular" name="celphone" placeholder="(XX)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}\-[0-9]{4}" class="form-control form-control-sm mb-1 signup-text-input" aria-placeholder="Celular">
-					<label for="e-mail" >E-mail</label>
-					<input id="e-mail" name="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email" placeholder="E-mail">
+					<label for="email_input" >E-mail</label>
+					<input id="email_input" name="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email" placeholder="E-mail">
+					<div class="form-text" id="email_text"></div>
+					<label for="celular_input">Celular</label>
+					<input type="numeric" id="celular_input" name="celphone" placeholder="(XX)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}\-[0-9]{4}" class="form-control form-control-sm mb-1 signup-text-input" aria-placeholder="Celular">
+					<div class="form-text" id="celular_text"></div>
+					<label  for="telefone">Telefone</label>
+					<input type="numeric" id="telefone" name="telephone" placeholder="(XX)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}\-[0-9]{4}" class="form-control form-control-sm mb-1 signup-text-input">
+					<div class="form-text"></div>
 					<label for="website" >Website</label>
 					<input id="website" name="website" class="form-control form-control-sm mb-1 signup-text-input" type="url" placeholder="Website">
+					<div class="form-text"></div>
 				</div>
-				<div class="ultima_sessao"></div>
+				<div class="d-flex flex-row-reverse mt-2">
+					<button type="button" class="btn estilo_botao" onclick="validaTerceiraSessao()">Validar</button>
+				</div>
 			</div>
 
 			<!-- ÚLTIMA TELA DE CADASTRO -->
-			<div class="row cadastro-superior mb-3 p-4 azul3 justify-content-center">
-				<h3 class="fas fa-pencil-alt"> Última Etapa | Opcionais</h3>
-				<div class="col-7">
-					<label  for="logoEmpresa">Adicione uma logo para o empreendimento</label>
-					<input class="form-control" name= "logoEmpresa" form-control-sm mb-4 type="file" id="logoEmpresa">
-					<div class="form-floating">
+			<div class="row tela-cadastro mb-3 p-4 azul4 justify-content-center">
+				<div class="d-flex flex-row pb-3">
+					<i class="fas fa-pencil-alt"></i>
+					<h3>Última Etapa | Opcionais</h3>
+				</div>
+				<div class="col-8">
+					<div class="form-floating mb-4">
 						<textarea class="form-control form-control" name="comentario" placeholder="" id="comentario" style="min-height: 100px;max-height: 300px"></textarea>
 						<label for="comentario">Adicione um comentário</label>
 					</div>
+					<label  for="logoEmpresa">Adicione uma logo para o empreendimento</label>
+					<input class="form-control" name= "logoEmpresa" form-control-sm mb-4 type="file" id="logoEmpresa">
 				</div>
 			</div>
 
 			<!-- BOTÃO INFERIOR -->
-			<div class="d-flex flex-row-reverse mb-2">
-				<button type="button" class="btn-success botao">
+			<div class="d-flex flex-row-reverse mt-3 mb-3">
+				<button type="button" class="btn estilo_botao">
 					<i class="fas fa-building"></i>
-					CADASTRAR
+					Cadastrar
 				</button>
 			</div>
 		</form>
@@ -143,20 +162,20 @@
 <script> /* ALTERNAÇÃO DE CAMPOS DISPONÍVEIS (TIPOS DE INCUBAÇÃO) */
 	$(document).ready(function() {
 		$("#p-incubada").click(function (){
-			$("#cpf").prop("disabled", false);
-			$("#cnpj").prop("disabled", true);
-			$("#inscricaoEstadual").prop("disabled", true);
-			$("#cnae").prop("disabled", true);
+			$("#cpf_input").prop("disabled", false);
+			$("#cnpj_input").prop("disabled", true);
+			$("#inscricaoEstadual_input").prop("disabled", true);
+			$("#cnae_input").prop("disabled", true);
 
 			$("#fase").val(0);
 			$("#incubada").val(0);
 			$("#p-incubada").val(200);
 		});
 		$("#incubada").click(function (){
-			$("#cpf").prop("disabled", true);
-			$("#cnpj").prop("disabled", false);
-			$("#inscricaoEstadual").prop("disabled", false);
-			$("#cnae").prop("disabled", false);
+			$("#cpf_input").prop("disabled", true);
+			$("#cnpj_input").prop("disabled", false);
+			$("#inscricaoEstadual_input").prop("disabled", false);
+			$("#cnae_input").prop("disabled", false);
 
 			$("#fase").val(0);
 			$("#p-incubada").val(0);
@@ -167,25 +186,28 @@
 			$("#incubada").val(0);
 			$("#fase").val(200);
 
-			$("#cpf").prop("disabled", true);
-			$("#cnpj").prop("disabled", true);
-			$("#inscricaoEstadual").prop("disabled", true);
-			$("#cnae").prop("disabled", true);
+			$("#cpf_input").prop("disabled", true);
+			$("#cnpj_input").prop("disabled", true);
+			$("#inscricaoEstadual_input").prop("disabled", true);
+			$("#cnae_input").prop("disabled", true);
 		});
 	});
+	/*
+		$('html,body').animate({scrollTop: $(".segunda_sessao").offset().top},'slow');
+	*/
 </script>
-<script> /* VERIFICAÇÃO DE CAMPOS VAZIOS PARA AVANÇAR O PROGRESSO DE PREENCHIMENTO */
+<script> /* VERIFICAÇÃO DE CAMPOS VAZIOS */
 	var sigla_marca_input = document.getElementById("sigla-marca");
 	var sigla_marca_text = document.getElementById("sigla-marca_text");
 	var razaoSocial_nome_input = document.getElementById("razaoSocial-nome");
 	var razaoSocial_nome_text = document.getElementById("razaoSocial-nome_text");
-	var cpf_input = document.getElementById("cpf");
+	var cpf_input = document.getElementById("cpf_input");
 	var cpf_text = document.getElementById("cpf_text");
-	var cnpj_input = document.getElementById("cnpj");
+	var cnpj_input = document.getElementById("cnpj_input");
 	var cnpj_text = document.getElementById("cnpj_text");
-	var cnae_input = document.getElementById("cnae");
+	var cnae_input = document.getElementById("cnae_input");
 	var cnae_text = document.getElementById("cnae_text");
-	var inscricaoEstadual_input = document.getElementById("inscricaoEstadual");
+	var inscricaoEstadual_input = document.getElementById("inscricaoEstadual_input");
 	var inscricaoEstadual_text = document.getElementById("inscricaoEstadual_text");
 
 	var p_incubada = document.getElementById("p-incubada");
@@ -194,17 +216,25 @@
 	var fase_text = document.getElementById("fase_text");
 	
 	function validaPrimeiraSessao(){
-		if(sigla_marca_input.value == ""){
+		if(fase.value == 200){
+			fase_text.innerHTML = "Preencha este campo para continuar.";
+			sigla_marca_text.innerHTML = "";
+			razaoSocial_nome_text.innerHTML = "";
+			cpf_text.innerHTML = "";
+			cnpj_text.innerHTML = "";
+			cnae_text.innerHTML = "";
+			inscricaoEstadual_text.innerHTML = "";
+		}
+		if(!sigla_marca_input.value){
 			sigla_marca_input.focus();
 			sigla_marca_text.innerHTML = "Preencha este campo para continuar.";
 		}
-		if(razaoSocial_nome_input.value == ""){
+		if(!razaoSocial_nome_input.value){
 			razaoSocial_nome_input.focus();
 			razaoSocial_nome_text.innerHTML = "Preencha este campo para continuar.";
 		}
-
 		if(p_incubada.value == 200){
-			if(cpf_input.value == ""){
+			if(!cpf_input.valu){
 				cpf_input.focus();
 				cpf_text.innerHTML = "Preencha este campo para continuar.";
 			}
@@ -215,21 +245,21 @@
 			fase_text.innerHTML = "";
 		}
 		if(incubada.value == 200){
-			if(cnpj_input.value == ""){
+			if(!cnpj_input.value){
 				cnpj_input.focus();
 				cnpj_text.innerHTML = "Preencha este campo para continuar.";
 			}
 			else{
 				cnpj_text.innerHTML = "";
 			}
-			if(cnae_input.value == ""){
+			if(!cnae_input.value){
 				cnae_input.focus();
 				cnae_text.innerHTML = "Preencha este campo para continuar.";
 			}
 			else{
 				cnae_text.innerHTML = "";
 			}
-			if(inscricaoEstadual_input.value == ""){
+			if(!inscricaoEstadual_input.value){
 				inscricaoEstadual_input.focus();
 				inscricaoEstadual_text.innerHTML = "Preencha este campo para continuar.";
 			}
@@ -237,34 +267,36 @@
 				inscricaoEstadual_text.innerHTML = "";
 			}
 			cpf_text.innerHTML = "";
-
 			fase_text.innerHTML = "";
 		}
-		if(fase.value == 200){
-			fase_text.innerHTML = "Preencha este campo para continuar.";
-			sigla_marca_text.innerHTML = "";
-			razaoSocial_nome_text.innerHTML = "";
-			cpf_text.innerHTML = "";
-			cnpj_text.innerHTML = "";
-			cnae_text.innerHTML = "";
-			inscricaoEstadual_text.innerHTML = "";
-		}
-	}
-	function avanca1(){
-		fase_text.innerHTML = "";
-		sigla_marca_text.innerHTML = "";
-		razaoSocial_nome_text.innerHTML = "";
-		cpf_text.innerHTML = "";
-		cnpj_text.innerHTML = "";
-		cnae_text.innerHTML = "";
-		inscricaoEstadual_text.innerHTML = "";
-
-		$('html,body').animate({scrollTop: $(".segunda_sessao").offset().top},'slow');
-
-		document.getElementById("progress").setValue == 50;
 	}
 	function validaSegundaSessao(){
+		var cep_input = document.getElementById("cep_input");
 
+		if(!cep_input.value){
+			cep_input.focus();
+			cep_text.innerHTML = "Preencha este campo para continuar.";
+		}
+		else{
+			cep_text.innerHTML = "Correto.";
+		}
+	}
+	function validaTerceiraSessao(){
+		var celular_input = document.getElementById("celular_input");
+		var email_input = document.getElementById("email_input");
+		
+		if(!celular_input.value){
+			celular_input.focus();
+			celular_text.innerHTML = "Preencha este campo para continuar.";
+		}
+		if(!email_input.value){
+			email_input.focus();
+			email_text.innerHTML = "Preencha este campo para continuar.";
+		}
+		else{
+			celular_text.innerHTML = "";
+			email_text.innerHTML = "";
+		}
 	}
 </script>
 </html>
