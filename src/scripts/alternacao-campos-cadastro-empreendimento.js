@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).ready(function() {
     $("#cpf_input").prop("disabled", true);
     $("#cnpj_input").prop("disabled", true);
     $("#inscricaoEstadual_input").prop("disabled", true);

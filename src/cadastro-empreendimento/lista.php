@@ -41,6 +41,7 @@
     <footer>       
          <a href="../painel-administrativo/index.html"><button type="button">Voltar para o Painel</button></a>
          <a href="enderecos.php"><button type="button">ir para Endereços</button></a>
+         <a href="contatos.php"><button type="button">ir para os Contatos da empresa</button></a>
     </footer>
     </body>
 </html>

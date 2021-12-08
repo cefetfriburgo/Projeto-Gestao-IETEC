@@ -26,7 +26,7 @@
         for($i=0; $i <= $Linhas; $i++ )
         {
             $registro = mysqli_fetch_row($result);
-            $id = $registro[0];
+            
             $cep = $registro[1];
             $rua = $registro[2];
             $numero = $registro[3];
