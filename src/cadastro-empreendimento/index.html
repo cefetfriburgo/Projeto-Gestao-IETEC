@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- VENDORS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -57,12 +58,12 @@
 					<div class="row">
 						<div class="col">
 							<label for="cpf_input">CPF</label>
-							<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" maxlength="14" disabled>
+							<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx" disabled>
 							<div class="form-text" id="cpf_text"></div>
 						</div>
 						<div class="col">
 							<label  for="cnpj_input">CNPJ</label>
-							<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2})/" maxlength="18" disabled>
+							<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx" disabled>
 							<div class="form-text" id="cnpj_text"></div>
 						</div>
 					</div>
@@ -119,10 +120,10 @@
 					<input id="email_input" name="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email" placeholder="E-mail">
 					<div class="form-text" id="email_text"></div>
 					<label for="celular_input">Celular</label>
-					<input type="numeric" id="celular_input" name="celphone" placeholder="(xx) 99999-9999" pattern="" class="form-control form-control-sm mb-1 signup-text-input" aria-placeholder="Celular">
+					<input type="numeric" id="celular_input" name="celphone" placeholder="(xx) 99999-9999" class="form-control form-control-sm mb-1 signup-text-input" aria-placeholder="Celular" inputmode="numeric">
 					<div class="form-text" id="celular_text"></div>
 					<label  for="telefone">Telefone</label>
-					<input type="numeric" id="telefone" name="telephone" placeholder="(xx) 9999-9999" pattern="" class="form-control form-control-sm mb-1 signup-text-input">
+					<input type="numeric" id="telefone" name="telephone" placeholder="(xx) 9999-9999" class="form-control form-control-sm mb-1 signup-text-input" inputmode="numeric">
 					<div class="form-text"></div>
 					<label for="website" >Website</label>
 					<input id="website" name="website" class="form-control form-control-sm mb-1 signup-text-input" type="url" placeholder="Website">
@@ -155,187 +156,9 @@
 			</div>
 		</form>
 	</div>
+	<!-- OWN -->
+	<script src="../scripts/alternacao-campos-cadastro-empreendimento.js"></script>
+	<script src="../scripts/mascaras-cadastro-empreendimento.js"></script>
+	<script src="../scripts/validacao-cadastro-empreendimento.js"></script>
 </body>
-<script> /* ALTERNAÇÃO DE CAMPOS DISPONÍVEIS (TIPOS DE INCUBAÇÃO) */
-	$(document).ready(function() {
-		$("#p-incubada").click(function (){
-			$("#cpf_input").prop("disabled", false);
-			$("#cnpj_input").prop("disabled", true);
-			$("#inscricaoEstadual_input").prop("disabled", true);
-			$("#cnae_input").prop("disabled", true);
-
-			$("#fase").val(0);
-			$("#incubada").val(0);
-			$("#p-incubada").val(200);
-		});
-		$("#incubada").click(function (){
-			$("#cpf_input").prop("disabled", true);
-			$("#cnpj_input").prop("disabled", false);
-			$("#inscricaoEstadual_input").prop("disabled", false);
-			$("#cnae_input").prop("disabled", false);
-
-			$("#fase").val(0);
-			$("#p-incubada").val(0);
-			$("#incubada").val(200);
-		});
-		$("#fase").click(function (){
-			$("#p-incubada").val(0);
-			$("#incubada").val(0);
-			$("#fase").val(200);
-
-			$("#cpf_input").prop("disabled", true);
-			$("#cnpj_input").prop("disabled", true);
-			$("#inscricaoEstadual_input").prop("disabled", true);
-			$("#cnae_input").prop("disabled", true);
-		});
-	});
-	/*
-		$('html,body').animate({scrollTop: $(".segunda_sessao").offset().top},'slow');
-	*/
-</script>
-<script> /* VERIFICAÇÃO DE CAMPOS VAZIOS */
-	var sigla_marca_input = document.getElementById("sigla-marca");
-	var sigla_marca_text = document.getElementById("sigla-marca_text");
-	var razaoSocial_nome_input = document.getElementById("razaoSocial-nome");
-	var razaoSocial_nome_text = document.getElementById("razaoSocial-nome_text");
-	var cpf_input = document.getElementById("cpf_input");
-	var cpf_text = document.getElementById("cpf_text");
-	var cnpj_input = document.getElementById("cnpj_input");
-	var cnpj_text = document.getElementById("cnpj_text");
-	var cnae_input = document.getElementById("cnae_input");
-	var cnae_text = document.getElementById("cnae_text");
-	var inscricaoEstadual_input = document.getElementById("inscricaoEstadual_input");
-	var inscricaoEstadual_text = document.getElementById("inscricaoEstadual_text");
-
-	var p_incubada = document.getElementById("p-incubada");
-	var incubada = document.getElementById("incubada");
-	var fase = document.getElementById("fase");
-	var fase_text = document.getElementById("fase_text");
-	
-	function validaPrimeiraSessao(){
-		if(fase.value == 200){
-			fase_text.innerHTML = "Preencha este campo para continuar.";
-			cpf_text.innerHTML = "";
-			cnpj_text.innerHTML = "";
-			cnae_text.innerHTML = "";
-			inscricaoEstadual_text.innerHTML = "";
-			sigla_marca_text.innerHTML = "";
-			razaoSocial_nome_text.innerHTML = "";
-		}
-		if(!sigla_marca_input.value){
-			sigla_marca_input.focus();
-			sigla_marca_text.innerHTML = "Preencha este campo para continuar.";
-		}
-		else{
-			sigla_marca_text.innerHTML = "";
-		}
-		if(!razaoSocial_nome_input.value){
-			razaoSocial_nome_input.focus();
-			razaoSocial_nome_text.innerHTML = "Preencha este campo para continuar.";
-		}
-		else{
-			razaoSocial_nome_text.innerHTML = "";
-		}
-		if(p_incubada.value == 200){
-			if(!cpf_input.value){
-				cpf_input.focus();
-				cpf_text.innerHTML = "Preencha este campo para continuar.";
-			}
-			else{
-				cpf_text.innerHTML = "";
-			}
-			cnpj_text.innerHTML = "";
-			cnae_text.innerHTML = "";
-			inscricaoEstadual_text.innerHTML = "";
-
-			fase_text.innerHTML = "";
-		}
-		if(incubada.value == 200){
-			if(!cnpj_input.value){
-				cnpj_input.focus();
-				cnpj_text.innerHTML = "Preencha este campo para continuar.";
-			}
-			else{
-				cnpj_text.innerHTML = "";
-			}
-			if(!cnae_input.value){
-				cnae_input.focus();
-				cnae_text.innerHTML = "Preencha este campo para continuar.";
-			}
-			else{
-				cnae_text.innerHTML = "";
-			}
-			if(!inscricaoEstadual_input.value){
-				inscricaoEstadual_input.focus();
-				inscricaoEstadual_text.innerHTML = "Preencha este campo para continuar.";
-			}
-			else{
-				inscricaoEstadual_text.innerHTML = "";
-			}
-			cpf_text.innerHTML = "";
-			fase_text.innerHTML = "";
-		}
-	}
-	function validaSegundaSessao(){
-		var cep_input = document.getElementById("cep_input");
-
-		if(!cep_input.value){
-			cep_input.focus();
-			cep_text.innerHTML = "Preencha este campo para continuar.";
-		}
-		else{
-			cep_text.innerHTML = "";
-		}
-	}
-	function validaTerceiraSessao(){
-		var email_input = document.getElementById("email_input");
-		var celular_input = document.getElementById("celular_input");
-		
-		if(!email_input.value){
-			email_input.focus();
-			email_text.innerHTML = "Preencha este campo para continuar.";
-		}
-		else{
-			email_text.innerHTML = "";
-		}
-		if(!celular_input.value){
-			celular_input.focus();
-			celular_text.innerHTML = "Preencha este campo para continuar.";
-		}
-		else{
-			celular_text.innerHTML = "";
-		}
-	}
-</script>
-<script> /* APLICAÇÕES DE MÁSCARAS DO IMASK */
-	var cpf_input = document.getElementById("cpf_input");
-	var maskCPF = {
-		mask: '000.000.000-00'
-	};
-	var maskCPF_apply = IMask(cpf_input,maskCPF);
-
-	var cnpj_input = document.getElementById("cnpj_input");
-	var maskCNPJ = {
-		mask: '00.000.000/0000-00'
-	};
-	var maskCNPJ_apply = IMask(cnpj_input,maskCNPJ);
-
-	var cep_input = document.getElementById("cep_input");
-	var maskCEP = {
-		mask: '00000-000'
-	};
-	var maskCEP_apply = IMask(cep_input,maskCEP);
-
-	var celular_input = document.getElementById("celular_input");
-	var maskCEL = {
-		mask: '(00) 00000-0000'
-	};
-	var maskCEL_apply = IMask(celular_input,maskCEL);
-
-	var telefone_input = document.getElementById("telefone");
-	var maskTEL = {
-		mask: '(00) 0000-0000'
-	};
-	var maskTEL_apply = IMask(telefone_input,maskTEL);
-</script>
 </html>
