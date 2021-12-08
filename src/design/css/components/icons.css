@@ -1,4 +1,11 @@
-.far, .fas{
-    font-size: 25px;
-    padding-right: 10px;  
+.icone-superior-cadastro{
+    color: #efefef;
+    font-size: 30px;
+    padding-right: 20px;
+
+    text-shadow: 1px 1px black;
 } 
+.icone-botao-cadastro{
+    font-size: 22px;
+    padding-right: 10px;
+}
