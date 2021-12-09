@@ -35,8 +35,10 @@ var maskCNAE = {
 };
 var maskCNAE_apply = IMask(cnae_input,maskCNAE);
 
+/*
 var inscricaoEstadual_input = document.getElementById("inscricaoEstadual_input");
 var maskIE = {
     mask: '000.000.000'
 };
 var maskIE_apply = IMask(inscricaoEstadual_input,maskIE);
+*/
