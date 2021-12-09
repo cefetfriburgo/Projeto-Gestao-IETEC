@@ -13,7 +13,7 @@
 
         $("#fase").val(0);
         $("#incubada").val(0);
-        $("#p-incubada").val(200);
+        $("#p-incubada").val('p');
     });
     $("#incubada").click(function (){
         $("#cpf_input").prop("disabled", true);
@@ -23,7 +23,7 @@
 
         $("#fase").val(0);
         $("#p-incubada").val(0);
-        $("#incubada").val(200);
+        $("#incubada").val('i');
     });
     $("#fase").click(function (){
         $("#p-incubada").val(0);
