@@ -1,5 +1,4 @@
-myFunction();
-function myFunction(){
+
 /* SETUP DOS IDS DO FORM
  * 
  * Insira os ID's CSS de acordo com os campos do seu formulário.
@@ -73,5 +72,3 @@ limpa_formulário_cep();
 }
 });
 });
-
-}

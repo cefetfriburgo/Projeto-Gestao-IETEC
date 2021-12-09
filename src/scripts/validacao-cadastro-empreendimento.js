@@ -1,5 +1,4 @@
-myFunction();
-function myFunction(){
+
     var sigla_marca_input = document.getElementById("sigla-marca");
     var sigla_marca_text = document.getElementById("sigla-marca_text");
     var razaoSocial_nome_input = document.getElementById("razaoSocial-nome");
@@ -112,5 +111,3 @@ function myFunction(){
             celular_text.innerHTML = "";
         }
     }
-    
-}

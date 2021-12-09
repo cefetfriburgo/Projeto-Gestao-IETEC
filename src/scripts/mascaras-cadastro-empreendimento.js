@@ -1,5 +1,4 @@
-myFunction();
-function myFunction(){
+
     var cpf_input = document.getElementById("cpf_input");
     var maskCPF = {
         mask: '000.000.000-00'
@@ -30,4 +29,3 @@ function myFunction(){
     };
     var maskTEL_apply = IMask(telefone_input,maskTEL);
     
-}
