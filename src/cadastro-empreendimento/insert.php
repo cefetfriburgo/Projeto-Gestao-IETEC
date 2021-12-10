@@ -21,14 +21,12 @@ $comentario = filter_var($_POST['comentario'],FILTER_SANITIZE_ADD_SLASHES, FILTE
 $celular = preg_replace("/[^0-9]/", "", $celular1);
 $phone = preg_replace("/[^0-9]/", "", $phone1);
 
-echo($fase);
+
 if($fase == 'p'){
         $cpf = $_POST['cpf'];
         $insert_empresa= "insert into empresa ( tipo, Endereco_id, nome_fantasia, cpf, data_incubacao, razao_social, comentario) values( '$fase', (SELECT MAX(id) FROM endereco), '$Nomefan', '$cpf', '$data',' $razaosocial', '$comentario')";
 
-        
         mysqli_query($conexao, $insert_empresa);
-        echo($fase);
 }
 if($fase == 'i'){
         $cnpj = $_POST['cnpj'];
@@ -39,7 +37,6 @@ if($fase == 'i'){
         $insert_contato= "insert into contato_empresa ( celular, telefone, email, website, Empresa_id) values( '$celular','$phone', '$email', '$website', (SELECT MAX(id) FROM empresa))";
 
         mysqli_query($conexao, $insert_empresa);
-        echo($fase);
 }
 
 $insert_endereco = "insert into endereco (endereco,cep,numero,bairro,municipio,complemento) values ('$endereco','$cep','$numero','$bairro','$municipio','$complemento')";
@@ -50,10 +47,8 @@ $LinhasAfetadas = mysqli_affected_rows($conexao);
 
 if($LinhasAfetadas==1){
         echo("Empresa cadastrada com sucesso");
-        echo($fase);
 }
 else{
         echo("ERRO, empresa não foi cadastrada");
-        echo($fase);
 }
 ?>
