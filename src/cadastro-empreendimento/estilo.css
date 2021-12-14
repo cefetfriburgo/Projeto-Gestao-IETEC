@@ -1,15 +1,43 @@
+body{
+}
+
 .tela-cadastro{
     border-radius: 4px;
     box-shadow: 3px 3px 2px 2px rgb(0,0,0,0.2);
+    height: 800px;
 }
 
 /* TAMANHO DAS TELAS DE CADASTRO */
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
     .container{
-        max-width: 900px;
+        max-width: 1500px;
     }
 }
 
 .form-text{
     height: 25px;
+}
+
+
+/**/
+
+#primeira-sessao{
+    position: absolute;
+    z-index: 10;
+    height: 700px;
+}
+#segunda-sessao{
+    position: absolute;
+    z-index: -2;
+    height: 700px;
+}
+#terceira-sessao{
+    position: absolute;
+    z-index: -3;
+    height: 700px;
+}
+#ultima-sessao{
+    position: absolute;
+    z-index: -4;
+    height: 700px;
 }
