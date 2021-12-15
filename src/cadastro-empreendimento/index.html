@@ -43,8 +43,8 @@
 									<div class="col">
 										<select class="form-select form-selec-sm signup-text-input" name="fase_incubacao">
 											<option value="200" id="fase" selected>Fase de Incubação</option>
-											<option value="p" id="p-incubada">Pré-Incubada</option>
-											<option value="i"  id="incubada">Incubada</option>
+											<option value="0" id="p-incubada">Pré-Incubada</option>
+											<option value="0"  id="incubada">Incubada</option>
 										</select>
 										<div class="form-text" id="fase_text"></div>
 									</div>
@@ -65,24 +65,24 @@
 								<div class="row">
 									<div class="col">
 										<label for="cpf_input">CPF</label>
-										<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx" disabled>
+										<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx" disabled="true">
 										<div class="form-text" id="cpf_text"></div>
 									</div>
 									<div class="col">
 										<label  for="cnpj_input">CNPJ</label>
-										<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx" disabled>
+										<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx" disabled="true">
 										<div class="form-text" id="cnpj_text"></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col">
 										<label for="cnae_input">CNAE</label>
-										<input id="cnae_input" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE" disabled>
+										<input id="cnae_input" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE" disabled="true">
 										<div class="form-text" id="cnae_text"></div>
 									</div>
 									<div class="col">
 										<label for="inscricaoEstadual_input">Inscrição Estadual</label>
-										<input id="inscricaoEstadual_input" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual" disabled>
+										<input id="inscricaoEstadual_input" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual" disabled="true">
 										<div class="form-text" id="inscricaoEstadual_text"></div>
 									</div>
 								</div>
@@ -168,8 +168,8 @@
 
 	<!-- BOTÕES DA TELA 
 	<div class="d-flex flex-row-reverse mt-2">
-		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
-		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
+		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Avançar</button>
 		<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
 	</div> -->
 </body>
