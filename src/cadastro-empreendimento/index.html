@@ -21,7 +21,7 @@
 
 	<!-- Carousel -->
 
-	<div id="carouselExampleIndicators" class="carousel slide">
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
 		<div class="carousel-indicators">
 		  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 		  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -87,6 +87,8 @@
 									</div>
 								</div>
 							</div>
+							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -109,6 +111,9 @@
 								<input id="municipio" name="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" >
 								<div class="form-text">Preenchimento automático de endereço</div>
 							</div>
+							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
+							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -132,6 +137,9 @@
 								<input id="website" name="website" class="form-control form-control-sm mb-1 signup-text-input" type="url" placeholder="Website">
 								<div class="form-text"></div>
 							</div>
+							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
+							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -146,6 +154,8 @@
 							<label  class="mt-4" for="logoEmpresa">Adicione uma logo para o empreendimento</label>
 							<input class="form-control form-control-sm mb-4" name= "logoEmpresa" type="file" id="logoEmpresa">
 						</div>
+						<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+						<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
 						<button type="submit" class="btn estilo_botao">
 							<i class="fas fa-building icone-botao-cadastro"></i>
 							Cadastrar
@@ -156,12 +166,12 @@
 		</div>
 	</div>
 
-	<!-- BOTÕES DA TELA -->
+	<!-- BOTÕES DA TELA 
 	<div class="d-flex flex-row-reverse mt-2">
 		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
 		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
 		<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-	</div>
+	</div> -->
 </body>
 	<!-- OWN  -->
 	<script src="../scripts/alternacao-campos-cadastro-empreendimento.js"></script>
