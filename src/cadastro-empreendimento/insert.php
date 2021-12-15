@@ -1,7 +1,6 @@
 <?php
 
 include "conexao.php";
-
 $fase= $_POST['fase_incubacao'];
 $data= filter_var($_POST['data'], FILTER_SANITIZE_ADD_SLASHES, FILTER_SANITIZE_STRING);
 $Nomefan= filter_var($_POST['sigla-marca'], FILTER_SANITIZE_ADD_SLASHES, FILTER_SANITIZE_STRING);

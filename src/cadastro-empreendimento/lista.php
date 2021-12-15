@@ -37,7 +37,7 @@
 
             echo"<tr><td>$tipo</td><td>$nomeFan</td><td>$cpf</td><td>$cnpj</td><td>$data_incubacao</td><td>$razao_social</td><td>$Endereco_id</td><td>$inscricao_estadual</td><td>$cnae</td><td>$logo</td><td>$comentario</td>";
         }
-}
+
     ?>
     <footer>       
          <a href="../painel-administrativo/index.html"><button type="button">Voltar para o Painel</button></a>
