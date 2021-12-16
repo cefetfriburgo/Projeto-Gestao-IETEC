@@ -8,11 +8,9 @@
 	
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<script src="../scripts/jquery.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/imask"></script>
 	<script src="https://kit.fontawesome.com/e3f3fbccaf.js" crossorigin="anonymous"></script>
-	<script src="../scripts/animacao.js"></script>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<link rel="stylesheet" type="text/css" href="../design/css/main.css">
 	<title>IETEC | Cadastrar Empreendimento</title>
@@ -65,30 +63,32 @@
 								<div class="row">
 									<div class="col">
 										<label for="cpf_input">CPF</label>
-										<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx" disabled="true">
+										<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx">
 										<div class="form-text" id="cpf_text"></div>
 									</div>
 									<div class="col">
 										<label  for="cnpj_input">CNPJ</label>
-										<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx" disabled="true">
+										<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx">
 										<div class="form-text" id="cnpj_text"></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col">
 										<label for="cnae_input">CNAE</label>
-										<input id="cnae_input" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE" disabled="true">
+										<input id="cnae_input" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE">
 										<div class="form-text" id="cnae_text"></div>
 									</div>
 									<div class="col">
 										<label for="inscricaoEstadual_input">Inscrição Estadual</label>
-										<input id="inscricaoEstadual_input" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual" disabled="true">
+										<input id="inscricaoEstadual_input" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual">
 										<div class="form-text" id="inscricaoEstadual_text"></div>
 									</div>
 								</div>
 							</div>
-							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+							<div class="d-flex flex-row-reverse">
+								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Avançar</button>
+							</div>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -111,9 +111,11 @@
 								<input id="municipio" name="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" >
 								<div class="form-text">Preenchimento automático de endereço</div>
 							</div>
-							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
-							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+							<div class="d-flex flex-row-reverse">
+								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Avançar</button>
+							</div>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -137,9 +139,11 @@
 								<input id="website" name="website" class="form-control form-control-sm mb-1 signup-text-input" type="url" placeholder="Website">
 								<div class="form-text"></div>
 							</div>
-							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
-							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+							<div class="d-flex flex-row-reverse">
+								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"  >Avançar</button>
+							</div>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -154,12 +158,14 @@
 							<label  class="mt-4" for="logoEmpresa">Adicione uma logo para o empreendimento</label>
 							<input class="form-control form-control-sm mb-4" name= "logoEmpresa" type="file" id="logoEmpresa">
 						</div>
-						<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-						<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
-						<button type="submit" class="btn estilo_botao">
-							<i class="fas fa-building icone-botao-cadastro"></i>
-							Cadastrar
-						</button>
+						<div class="d-flex flex-row-reverse">
+							<button type="submit" class="btn estilo_botao">
+								<i class="fas fa-building icone-botao-cadastro"></i>
+								Cadastrar
+							</button>
+							<button type="button" class="btn estilo_botao">Validar</button>
+							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
+						</div>
 					</div>
 				</div>
 			</form>

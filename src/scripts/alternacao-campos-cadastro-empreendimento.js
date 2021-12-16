@@ -1,24 +1,24 @@
- (function($){
+
+(function($){
     $(document).ready(function(){
-        $("#cpf_input").prop("disabled", true);
-        $("#cnpj_input").prop("disabled", true);
-        $("#inscricaoEstadual_input").prop("disabled", true);
-        $("#cnae_input").prop("disabled", true);
+        $('#cpf_input').attr("disabled","disabled");
+        $('#cnpj_input').attr("disabled","disabled");
+        $('#inscricaoEstadual_input').attr("disabled","disabled");
+        $('#cnae_input').attr("disabled","disabled");
 
         $("#p-incubada").click(function (){
-            $("#cpf_input").prop("disabled", false);
-            $('#cpf_input').removeAttr("disabled"); // Isso resolve o problema do Chromium
+            $('#cpf_input').removeAttr("disabled");
 
-            $("#cnpj_input").prop("disabled", true);
-            $("#inscricaoEstadual_input").prop("disabled", true);
-            $("#cnae_input").prop("disabled", true);
+            $('#cnpj_input').attr("disabled","disabled");
+            $('#inscricaoEstadual_input').attr("disabled","disabled");
+            $('#cnae_input').attr("disabled","disabled");
 
             $("#fase").val(0);
             $("#incubada").val(0);
             $("#p-incubada").val('p');
         });
         $("#incubada").click(function (){
-            $('#cpf_input').attr("disabled");
+            $('#cpf_input').attr("disabled","disabled");
 
             $('#cnpj_input').removeAttr("disabled");
             $('#inscricaoEstadual_input').removeAttr("disabled");
@@ -33,11 +33,10 @@
             $("#incubada").val(0);
             $("#fase").val(200);
 
-            $("#cpf_input").prop("disabled", true);
-            $("#cnpj_input").prop("disabled", true);
-            $("#inscricaoEstadual_input").prop("disabled", true);
-            $("#cnae_input").prop("disabled", true);
+            $('#cpf_input').attr("disabled","disabled");
+            $('#cnpj_input').attr("disabled","disabled");
+            $('#inscricaoEstadual_input').attr("disabled","disabled");
+            $('#cnae_input').attr("disabled","disabled");
         });
     });
-    
 })(jQuery);
