@@ -1,10 +1,17 @@
 body{
 }
+#carouselExampleIndicators{
+    max-width: 1920px;
+}
 
 .tela-cadastro{
     border-radius: 4px;
     box-shadow: 3px 3px 2px 2px rgb(0,0,0,0.2);
-    height: 800px;
+    height: 650px;
+    max-width: 1920px;
+    align-content: center;
+   
+    
 }
 
 /* TAMANHO DAS TELAS DE CADASTRO */
@@ -16,6 +23,13 @@ body{
 
 .form-text{
     height: 25px;
+}
+
+#sigla-marca,#razaoSocial-nome,#data,#cpf_input,#cnpj_input,#inscricaoEstadual_input,#cnae_input,#fase_id{
+    max-width: 600px;
+}
+#bt{
+    max-width: 200px;
 }
 
 #primeira-sessao{

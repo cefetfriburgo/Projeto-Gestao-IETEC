@@ -18,7 +18,10 @@
 <body class="branco">
 
 	<!-- Carousel -->
-
+	<div class="content">
+	<div class="row">
+	<div class="col-3"></div>
+	<div class="col-6">
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
 		<div class="carousel-indicators">
 		  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -28,7 +31,7 @@
 		</div>
 		<div class="carousel-inner">
 			<form action="insert.php" method="POST"> 
-				<div class="tela-cadastro mt-5 p-4 d-flex flex-row azul2">
+				<div class="tela-cadastro mt-5 p-5 azul2">
 					<div class="carousel-item active">
 						<!-- PRIMEIRA TELA DE CADASTRO -->
 						<div id="primeira-sessao" class="row justify-content-center">
@@ -36,10 +39,10 @@
 								<i class="fas fa-file-alt icone-superior-cadastro"></i>
 								<h3>Primeira Etapa</h3>
 							</div>
-							<div class="col">
+							<div class="col-6">
 								<div class="row">
 									<div class="col">
-										<select class="form-select form-selec-sm signup-text-input" name="fase_incubacao">
+										<select class="form-select form-selec-sm signup-text-input" id="fase_id" name="fase_incubacao">
 											<option value="200" id="fase" selected>Fase de Incubação</option>
 											<option value="0" id="p-incubada">Pré-Incubada</option>
 											<option value="0"  id="incubada">Incubada</option>
@@ -55,6 +58,8 @@
 										<label for="sigla-marca">Sigla/Marca</label>
 										<input name="sigla-marca" id="sigla-marca" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Sigla/Marca">
 										<div class="form-text" id="sigla-marca_text"></div>
+									</div>
+									<div class="col">
 										<label for="razaoSocial-nome">Razão Social/Nome</label>
 										<input name="razaoSocial-nome" id="razaoSocial-nome" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Razão Social/Nome">
 										<div class="form-text" id="razaoSocial-nome_text"></div>
@@ -85,12 +90,14 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="d-flex flex-row-reverse">
-								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Avançar</button>
-							</div>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
+							</div>	
 						</div>
 					</div>
+
 					<div class="carousel-item">
 						<!-- SEGUNDA TELA DE CADASTRO -->
 						<div id="segunda-sessao" class="row justify-content-center animated">
@@ -98,7 +105,7 @@
 								<i class="fas fa-map-marker-alt icone-superior-cadastro"></i>
 								<h3>Endereço</h3>
 							</div>
-							<div class="col">
+							<div class="col-6">
 								<div class="form-floating">
 									<input id="cep_input" name="cep" class="form-control signup-text-input" type="text" inputmode="numeric" placeholder="CEP">
 									<label  for="cep_input">CEP</label>
@@ -111,13 +118,15 @@
 								<input id="municipio" name="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" >
 								<div class="form-text">Preenchimento automático de endereço</div>
 							</div>
+							
 							<div class="d-flex flex-row-reverse">
-								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Avançar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
+								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
 							</div>
 						</div>
 					</div>
+
 					<div class="carousel-item">
 						<!-- TERCEIRA TELA DE CADASTRO -->
 						<div id="terceira-sessao" class="row justify-content-center animated">
@@ -125,7 +134,7 @@
 								<i class="fas fa-phone-square-alt icone-superior-cadastro"></i>
 								<h3>Contatos</h3>
 							</div>
-							<div class="col">
+							<div class="col-6">
 								<label for="email_input" >E-mail</label>
 								<input id="email_input" name="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email" placeholder="E-mail">
 								<div class="form-text" id="email_text"></div>
@@ -140,12 +149,13 @@
 								<div class="form-text"></div>
 							</div>
 							<div class="d-flex flex-row-reverse">
-								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"  >Avançar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
+								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
 							</div>
 						</div>
 					</div>
+
 					<div class="carousel-item">
 					<!-- ÚLTIMA TELA DE CADASTRO -->
 					<div id="ultima-sessao" class="row justify-content-center animated">
@@ -153,7 +163,7 @@
 							<i class="fas fa-pencil-alt icone-superior-cadastro"></i>
 							<h3>Opcionais</h3>
 						</div>
-						<div class="col">
+						<div class="col-6">
 							<textarea class="form-control form-control" name="comentario" placeholder="Adicione um comentário..." id="comentario" style="min-height: 100px;max-height: 200px;"></textarea>
 							<label  class="mt-4" for="logoEmpresa">Adicione uma logo para o empreendimento</label>
 							<input class="form-control form-control-sm mb-4" name= "logoEmpresa" type="file" id="logoEmpresa">
@@ -163,13 +173,19 @@
 								<i class="fas fa-building icone-botao-cadastro"></i>
 								Cadastrar
 							</button>
-							<button type="button" class="btn estilo_botao">Validar</button>
-							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
+							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
+							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
 						</div>
+						
 					</div>
 				</div>
 			</form>
 		</div>
+	</div>
+	</div>
+	
+	<div class="col-6"></div>
+	</div>
 	</div>
 
 	<!-- BOTÕES DA TELA 
