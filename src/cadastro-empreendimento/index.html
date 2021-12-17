@@ -12,188 +12,174 @@
 	<script src="https://unpkg.com/imask"></script>
 	<script src="https://kit.fontawesome.com/e3f3fbccaf.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
-	<link rel="stylesheet" type="text/css" href="../design/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<title>IETEC | Cadastrar Empreendimento</title>
 </head>
 <body class="branco">
-
-	<!-- Carousel -->
-	<div class="content">
-	<div class="row">
-	<div class="col-3"></div>
-	<div class="col-6">
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
-		<div class="carousel-indicators">
-		  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-		  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-		  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-		  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+	<div class="position-relative m-4">
+		<div class="progress" style="height: 1px;">
+		  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
-		<div class="carousel-inner">
-			<form action="insert.php" method="POST"> 
-				<div class="tela-cadastro mt-5 p-5 azul2">
-					<div class="carousel-item active">
+		<button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">1</button>
+		<button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
+		<button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
+		<button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">34</button>
+	</div>
+	<div class="carousel carousel-dark">
+		<form action="insert.php" method="POST">
+			<div class="container justify-content-center align-items-center p-4 tela-cadastro azul2">
+				<div id="carousel" class="carousel" data-bs-touch="false" data-bs-interval="false">
+					<div class="carousel-inner">
+
 						<!-- PRIMEIRA TELA DE CADASTRO -->
-						<div id="primeira-sessao" class="row justify-content-center">
-							<div class="d-flex flex-row pb-3">
-								<i class="fas fa-file-alt icone-superior-cadastro"></i>
-								<h3>Primeira Etapa</h3>
-							</div>
-							<div class="col-6">
-								<div class="row">
-									<div class="col">
-										<select class="form-select form-selec-sm signup-text-input" id="fase_id" name="fase_incubacao">
-											<option value="200" id="fase" selected>Fase de Incubação</option>
-											<option value="0" id="p-incubada">Pré-Incubada</option>
-											<option value="0"  id="incubada">Incubada</option>
-										</select>
-										<div class="form-text" id="fase_text"></div>
+						<div class="carousel-item active">
+							<div id="primeira-sessao" class="row justify-content-center">
+								<div class="d-flex flex-row pb-3">
+									<i class="fas fa-file-alt icone-superior-cadastro"></i>
+									<h3>Primeira Etapa</h3>
+								</div>
+								<div class="col">
+									<div class="row">
+										<div class="col">
+											<select class="form-select form-selec-sm signup-text-input" id="fase_id" name="fase_incubacao">
+												<option value="200" id="fase" selected>Fase de Incubação</option>
+												<option value="0" id="p-incubada">Pré-Incubada</option>
+												<option value="0"  id="incubada">Incubada</option>
+											</select>
+											<div class="form-text" id="fase_text"></div>
+										</div>
+										<div class="col">
+											<input class="form-check-input" type="date" name="data" id="data">
+										</div>
 									</div>
-									<div class="col">
-										<input class="form-check-input" type="date" name="data" id="data" style="height: 62%;width: 100%;">
+									<div class="row">
+										<div class="col float-left">
+											<label for="sigla-marca">Sigla/Marca</label>
+											<input name="sigla-marca" id="sigla-marca" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Sigla/Marca">
+											<div class="form-text" id="sigla-marca_text"></div>
+										</div>
+										<div class="col">
+											<label for="razaoSocial-nome">Razão Social/Nome</label>
+											<input name="razaoSocial-nome" id="razaoSocial-nome" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Razão Social/Nome">
+											<div class="form-text" id="razaoSocial-nome_text"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col">
+											<label for="cpf_input">CPF</label>
+											<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx">
+											<div class="form-text" id="cpf_text"></div>
+										</div>
+										<div class="col">
+											<label  for="cnpj_input">CNPJ</label>
+											<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx">
+											<div class="form-text" id="cnpj_text"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col">
+											<label for="cnae_input">CNAE</label>
+											<input id="cnae_input" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE">
+											<div class="form-text" id="cnae_text"></div>
+										</div>
+										<div class="col">
+											<label for="inscricaoEstadual_input">Inscrição Estadual</label>
+											<input id="inscricaoEstadual_input" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual">
+											<div class="form-text" id="inscricaoEstadual_text"></div>
+										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col float-left">
-										<label for="sigla-marca">Sigla/Marca</label>
-										<input name="sigla-marca" id="sigla-marca" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Sigla/Marca">
-										<div class="form-text" id="sigla-marca_text"></div>
-									</div>
-									<div class="col">
-										<label for="razaoSocial-nome">Razão Social/Nome</label>
-										<input name="razaoSocial-nome" id="razaoSocial-nome" class="form-control form-control-sm mb-1 signup-text-input" type="text" placeholder="Razão Social/Nome">
-										<div class="form-text" id="razaoSocial-nome_text"></div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<label for="cpf_input">CPF</label>
-										<input name="cpf" id="cpf_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xxx.xxx.xxx-xx">
-										<div class="form-text" id="cpf_text"></div>
-									</div>
-									<div class="col">
-										<label  for="cnpj_input">CNPJ</label>
-										<input name="cnpj" id="cnpj_input" class="form-control form-control-sm signup-text-input" type="text" inputmode="numeric" placeholder="xx.xxx.xxx/xxxx-xx">
-										<div class="form-text" id="cnpj_text"></div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<label for="cnae_input">CNAE</label>
-										<input id="cnae_input" name="cnae" class="form-control form-control-sm signup-text-input" type="text" placeholder="CNAE">
-										<div class="form-text" id="cnae_text"></div>
-									</div>
-									<div class="col">
-										<label for="inscricaoEstadual_input">Inscrição Estadual</label>
-										<input id="inscricaoEstadual_input" name="inscricaoEstadual" class="form-control form-control-sm signup-text-input" type="text" placeholder="Inscrição Estadual">
-										<div class="form-text" id="inscricaoEstadual_text"></div>
-									</div>
-								</div>
-							</div>
-
-							<div class="d-flex flex-row-reverse">
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
+							</div> <!-- FIM PRIMEIRA SESSÃO -->
+							<div class="div-botoes-inferior">
+								<button type="button" class="btn estilo_botao" data-bs-target="#carousel" data-bs-slide="next" >Avançar</button>
 								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
-							</div>	
+							</div>
 						</div>
-					</div>
 
-					<div class="carousel-item">
 						<!-- SEGUNDA TELA DE CADASTRO -->
-						<div id="segunda-sessao" class="row justify-content-center animated">
-							<div class="d-flex flex-row pb-3">
-								<i class="fas fa-map-marker-alt icone-superior-cadastro"></i>
-								<h3>Endereço</h3>
-							</div>
-							<div class="col-6">
-								<div class="form-floating">
-									<input id="cep_input" name="cep" class="form-control signup-text-input" type="text" inputmode="numeric" placeholder="CEP">
-									<label  for="cep_input">CEP</label>
-									<div class="form-text" id="cep_text">Insira o CEP</div>
+						<div class="carousel-item">
+							<div id="segunda-sessao" class="row justify-content-center animated">
+								<div class="d-flex flex-row pb-3">
+									<i class="fas fa-map-marker-alt icone-superior-cadastro"></i>
+									<h3>Endereço</h3>
 								</div>
-								<input id="endereco" name="endereco" class="form-control form-control-sm mt-2 signup-text-input" type="text" placeholder="Endereço" >
-								<input id="numero" name = "numero" class="form-control form-control-sm mt-1 signup-text-input" type="number" placeholder="Número" >
-								<input id="complemento" name="complemento" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Complemento" >
-								<input id="bairro" name="bairro" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Bairro" >
-								<input id="municipio" name="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" >
-								<div class="form-text">Preenchimento automático de endereço</div>
+								<div class="col">
+									<div class="form-floating">
+										<input id="cep_input" name="cep" class="form-control signup-text-input" type="text" inputmode="numeric" placeholder="CEP">
+										<label  for="cep_input">CEP</label>
+										<div class="form-text" id="cep_text">Insira o CEP</div>
+									</div>
+									<input id="endereco" name="endereco" class="form-control form-control-sm mt-2 signup-text-input" type="text" placeholder="Endereço" >
+									<input id="numero" name = "numero" class="form-control form-control-sm mt-1 signup-text-input" type="number" placeholder="Número" >
+									<input id="complemento" name="complemento" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Complemento" >
+									<input id="bairro" name="bairro" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Bairro" >
+									<input id="municipio" name="municipio" class="form-control form-control-sm mt-1 signup-text-input" type="text" placeholder="Município" >
+									<div class="form-text">Preenchimento automático de endereço</div>
+								</div>
+							</div><!-- FIM SEGUNDA SESSÃO -->
+							<div class="div-botoes-inferior">
+								<button type="button" class="btn estilo_botao" data-bs-target="#carousel" data-bs-slide="next" >Avançar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carousel" data-bs-slide="prev" >Voltar</button>
+								<button type="button" class="btn estilo_botao" onclick="validaSegundaSessao()">Validar</button> 
 							</div>
-							
-							<div class="d-flex flex-row-reverse">
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
-								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
-							</div>
-						</div>
-					</div>
+						</div> 
 
-					<div class="carousel-item">
 						<!-- TERCEIRA TELA DE CADASTRO -->
-						<div id="terceira-sessao" class="row justify-content-center animated">
-							<div class="d-flex flex-row pb-3">
-								<i class="fas fa-phone-square-alt icone-superior-cadastro"></i>
-								<h3>Contatos</h3>
-							</div>
-							<div class="col-6">
-								<label for="email_input" >E-mail</label>
-								<input id="email_input" name="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email" placeholder="E-mail">
-								<div class="form-text" id="email_text"></div>
-								<label for="celular_input">Celular</label>
-								<input type="numeric" id="celular_input" name="celphone" placeholder="(xx) 99999-9999" class="form-control form-control-sm mb-1 signup-text-input" aria-placeholder="Celular" inputmode="numeric">
-								<div class="form-text" id="celular_text"></div>
-								<label  for="telefone">Telefone</label>
-								<input type="numeric" id="telefone" name="telephone" placeholder="(xx) 9999-9999" class="form-control form-control-sm mb-1 signup-text-input" inputmode="numeric">
-								<div class="form-text"></div>
-								<label for="website" >Website</label>
-								<input id="website" name="website" class="form-control form-control-sm mb-1 signup-text-input" type="url" placeholder="Website">
-								<div class="form-text"></div>
-							</div>
-							<div class="d-flex flex-row-reverse">
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="fadePrimeiraTela()">Avançar</button>
-								<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
-								<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
+						<div class="carousel-item">
+							<div id="terceira-sessao" class="row justify-content-center animated">
+								<div class="d-flex flex-row pb-3">
+									<i class="fas fa-phone-square-alt icone-superior-cadastro"></i>
+									<h3>Contatos</h3>
+								</div>
+								<div class="col">
+									<label for="email_input" >E-mail</label>
+									<input id="email_input" name="e-mail" class="form-control form-control-sm mb-1 signup-text-input" type="email" placeholder="E-mail">
+									<div class="form-text" id="email_text"></div>
+									<label for="celular_input">Celular</label>
+									<input type="numeric" id="celular_input" name="celphone" placeholder="(xx) 99999-9999" class="form-control form-control-sm mb-1 signup-text-input" aria-placeholder="Celular" inputmode="numeric">
+									<div class="form-text" id="celular_text"></div>
+									<label  for="telefone">Telefone</label>
+									<input type="numeric" id="telefone" name="telephone" placeholder="(xx) 9999-9999" class="form-control form-control-sm mb-1 signup-text-input" inputmode="numeric">
+									<div class="form-text"></div>
+									<label for="website" >Website</label>
+									<input id="website" name="website" class="form-control form-control-sm mb-1 signup-text-input" type="url" placeholder="Website">
+									<div class="form-text"></div>
+								</div>
+							</div> <!-- FIM TERCEIRA SESSÃO --> 
+							<div class="div-botoes-inferior">
+								<button type="button" class="btn estilo_botao" data-bs-target="#carousel" data-bs-slide="next" >Avançar</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carousel" data-bs-slide="prev" >Voltar</button>
+								<button type="button" class="btn estilo_botao" onclick="validaTerceiraSessao()">Validar</button> 
 							</div>
 						</div>
-					</div>
 
-					<div class="carousel-item">
-					<!-- ÚLTIMA TELA DE CADASTRO -->
-					<div id="ultima-sessao" class="row justify-content-center animated">
-						<div class="d-flex flex-row pb-3">
-							<i class="fas fa-pencil-alt icone-superior-cadastro"></i>
-							<h3>Opcionais</h3>
-						</div>
-						<div class="col-6">
-							<textarea class="form-control form-control" name="comentario" placeholder="Adicione um comentário..." id="comentario" style="min-height: 100px;max-height: 200px;"></textarea>
-							<label  class="mt-4" for="logoEmpresa">Adicione uma logo para o empreendimento</label>
-							<input class="form-control form-control-sm mb-4" name= "logoEmpresa" type="file" id="logoEmpresa">
-						</div>
-						<div class="d-flex flex-row-reverse">
-							<button type="submit" class="btn estilo_botao">
-								<i class="fas fa-building icone-botao-cadastro"></i>
-								Cadastrar
-							</button>
-							<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="fadePrimeiraTela()">Voltar</button>
-							<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button> 
-						</div>
-						
+						<!-- ÚLTIMA TELA DE CADASTRO -->
+						<div class="carousel-item">
+							<div id="ultima-sessao" class="row justify-content-center animated">
+								<div class="d-flex flex-row pb-3">
+									<i class="fas fa-pencil-alt icone-superior-cadastro"></i>
+									<h3>Opcionais</h3>
+								</div>
+								<div class="col">
+									<textarea class="form-control form-control" name="comentario" placeholder="Adicione um comentário..."></textarea>
+									<label  class="mt-4" for="logoEmpresa">Adicione uma logo para o empreendimento</label>
+									<input class="form-control form-control-sm mb-4" name= "logoEmpresa" type="file">
+								</div>
+							</div> <!-- FIM ÚLTIMA SESSÃO -->
+							<div class="div-botoes-inferior">
+								<button type="submit" class="btn estilo_botao">
+									<i class="fas fa-building icone-botao-cadastro"></i>
+									Cadastrar
+								</button>
+								<button type="button" class="btn estilo_botao" data-bs-target="#carousel" data-bs-slide="prev" >Voltar</button>
+								<button type="button" class="btn estilo_botao">Validar</button>
+							</div>
+						</div> 
 					</div>
 				</div>
-			</form>
-		</div>
+			</div>
+		</form>
 	</div>
-	</div>
-	
-	<div class="col-6"></div>
-	</div>
-	</div>
-
-	<!-- BOTÕES DA TELA 
-	<div class="d-flex flex-row-reverse mt-2">
-		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">Voltar</button>
-		<button type="button" class="btn estilo_botao" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">Avançar</button>
-		<button type="button" class="btn estilo_botao" onclick="validaPrimeiraSessao()">Validar</button>
-	</div> -->
 </body>
 	<!-- OWN  -->
 	<script src="../scripts/alternacao-campos-cadastro-empreendimento.js"></script>

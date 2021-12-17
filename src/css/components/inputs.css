@@ -1,0 +1,19 @@
+input:disabled{
+    border: 2px solid #808080;
+}
+
+select,textarea,input[type="file"],input[type="text"],input[type="date"],input[type="numeric"],input[type="number"],input[type="email"],input[type="url"]{
+    padding: 10px;
+    margin: 0;
+
+    border: 2px solid #3b3b3b; 
+    border-radius: 6px;
+}
+input[type="date"]{
+    height: 62%;
+    width: 100%;
+}
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+}
