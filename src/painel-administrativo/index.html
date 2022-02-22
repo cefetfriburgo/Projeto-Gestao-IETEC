@@ -10,21 +10,44 @@
 </head>
 <body>
 	<div class="container-fluid"> <!-- CONTEINER GERAL DAS FUNCIONALIDADES -->
-		<!-- RELATÓRIOS DA INCUBADORA -->
+		<!-- PARTE SUPERIOR -->
+		<div class="row" style="background-color: cyan;height: 50px;">
+			<p>Olá, <b>User</b></p>
+		</div>
 		<div class="row m-4">
+			<div class="div-ferramentas">
+				<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Cadastrar empreendimento">
+				  1
+				</button>
+				<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Editar empreendimento cadastrado">
+				  2
+				</button>
+				<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Adicionar usuários">
+				  3
+				</button>
+			</div>
 			<div class="d-flex justify-content-center">
-				<div id="div-relatorios" class="col-10">
+				<div class="div-relatorios col-3 m-1">
 					<div class="">
-
-						<button class="btn btn-primary">Acessar mais relatórios</button>
+						<button class="btn btn-primary">Acessar</button>
+					</div>
+				</div>
+				<div class="div-relatorios col-3 m-1">
+					<div class="">
+						<button class="btn btn-primary">Acessar</button>
+					</div>
+				</div>
+				<div class="div-relatorios col-3 m-1">
+					<div class="">
+						<button class="btn btn-primary">Acessar</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row justify-content-around">
+		<div class="row justify-content-center">
 			<!-- LISTAGEM DE NOVIDADES -->
-			<div id="div-novidades" class="col-3 altura-conteiners bg-info rolagem p-3">
+			<div id="div-novidades" class="col-4 m-1 altura-conteiners bg-info rolagem p-3">
 				<div class="row mb-2">
 					<div class="col-6">
 						<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
@@ -85,7 +108,7 @@
 			</div>
 
 			<!-- LISTAGEM DE EMPREENDIMENTOS -->
-			<div id="div-listagem" class="col-5 altura-conteiners bg-info p-3">
+			<div id="div-listagem" class="col-5 m-2 altura-conteiners bg-info p-3">
 				<div class="row mb-2">
 					<div class="col-6">
 						<select class="form-select form-selec-sm"> <!-- SELEÇÃO DINÂMICA SEM BOTÃO -->
@@ -128,25 +151,6 @@
 					<div class="card-footer text-muted">
 					  Data de Incubação: 10/10/2010
 					</div>
-				</div>
-			</div>
-
-			<!-- OUTRAS FUNÇÕES -->
-			<div id="div-outras" class="col-2 altura-conteiners bg-info rolagem p-3">
-				<div class="d-grid mx-auto mt-2">
-					<button class="btn btn-primary" onclick="window.open('../cadastro-empreendimento/index.html')">
-						Cadastrar Empreendimento
-					</button>
-				</div>
-				<div class="d-grid mx-auto mt-2">
-					<button class="btn btn-primary" onclick="window.open('../','_blank')">
-						Editar Empreendimento Cadastrado
-					</button>
-				</div>
-				<div class="d-grid mx-auto mt-2">
-					<button class="btn btn-primary" onclick="window.open('../','_blank')">
-						Administrar usuários
-					</button>
 				</div>
 			</div>
 		</div>
